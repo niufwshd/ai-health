@@ -1,0 +1,492 @@
+Date : 2024-08-20 18:21:11
+Directory : e:\weichang\iot-web
+Total : 307 files,  26540 codes, 1545 comments, 2071 blanks, all 30156 lines
+
+Languages
++--------------------+------------+------------+------------+------------+------------+
+| language           | files      | code       | comment    | blank      | total      |
++--------------------+------------+------------+------------+------------+------------+
+| Vue                |        115 |     18,633 |        739 |      1,029 |     20,401 |
+| JavaScript         |        108 |      5,831 |        707 |        639 |      7,177 |
+| SCSS               |         10 |      1,229 |         55 |        148 |      1,432 |
+| Markdown           |          7 |        529 |         28 |        226 |        783 |
+| JSON               |          1 |        102 |          0 |          1 |        103 |
+| Handlebars         |          3 |         59 |          0 |         12 |         71 |
+| XML                |         54 |         54 |          0 |          0 |         54 |
+| YAML               |          4 |         50 |         15 |         14 |         79 |
+| CSS                |          2 |         26 |          0 |          1 |         27 |
+| HTML               |          1 |         14 |          1 |          1 |         16 |
+| JSON with Comments |          1 |          9 |          0 |          0 |          9 |
+| Docker             |          1 |          4 |          0 |          0 |          4 |
++--------------------+------------+------------+------------+------------+------------+
+
+Directories
++---------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                                  | files      | code       | comment    | blank      | total      |
++---------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                                     |        307 |     26,540 |      1,545 |      2,071 |     30,156 |
+| . (Files)                                                                             |         15 |        988 |         41 |        228 |      1,257 |
+| .github                                                                               |          4 |         31 |         29 |         23 |         83 |
+| .github (Files)                                                                       |          1 |          2 |          1 |          2 |          5 |
+| .github\ISSUE_TEMPLATE                                                                |          3 |         29 |         28 |         21 |         78 |
+| build                                                                                 |          1 |         28 |          0 |          8 |         36 |
+| mock                                                                                  |          8 |        985 |         36 |         75 |      1,096 |
+| mock (Files)                                                                          |          6 |        384 |         30 |         49 |        463 |
+| mock\role                                                                             |          2 |        601 |          6 |         26 |        633 |
+| plop-templates                                                                        |          7 |        227 |          0 |         22 |        249 |
+| plop-templates (Files)                                                                |          1 |          2 |          0 |          1 |          3 |
+| plop-templates\component                                                              |          2 |         76 |          0 |          7 |         83 |
+| plop-templates\store                                                                  |          2 |         73 |          0 |          7 |         80 |
+| plop-templates\view                                                                   |          2 |         76 |          0 |          7 |         83 |
+| public                                                                                |          1 |         14 |          1 |          1 |         16 |
+| src                                                                                   |        264 |     24,113 |      1,438 |      1,701 |     27,252 |
+| src (Files)                                                                           |          4 |        106 |         53 |         36 |        195 |
+| src\api                                                                               |         16 |        816 |        190 |        160 |      1,166 |
+| src\api (Files)                                                                       |          6 |        458 |          0 |         73 |        531 |
+| src\api\basics                                                                        |          1 |         55 |         15 |          5 |         75 |
+| src\api\system                                                                        |          9 |        303 |        175 |         82 |        560 |
+| src\assets                                                                            |          1 |          1 |          0 |          0 |          1 |
+| src\assets\custom-theme                                                               |          1 |          1 |          0 |          0 |          1 |
+| src\components                                                                        |         44 |      6,343 |        210 |        277 |      6,830 |
+| src\components\BackToTop                                                              |          1 |        105 |          0 |          7 |        112 |
+| src\components\Breadcrumb                                                             |          1 |         77 |          3 |          7 |         87 |
+| src\components\Charts                                                                 |          4 |        687 |          4 |         22 |        713 |
+| src\components\Charts (Files)                                                         |          3 |        639 |          0 |         17 |        656 |
+| src\components\Charts\mixins                                                          |          1 |         48 |          4 |          5 |         57 |
+| src\components\DatePickerRange                                                        |          1 |        130 |          0 |          6 |        136 |
+| src\components\DndList                                                                |          1 |        155 |          2 |         10 |        167 |
+| src\components\DragSelect                                                             |          1 |         59 |          2 |          5 |         66 |
+| src\components\Dropzone                                                               |          1 |        265 |         11 |         22 |        298 |
+| src\components\ErrorLog                                                               |          1 |         75 |          0 |          4 |         79 |
+| src\components\GithubCorner                                                           |          1 |         51 |          0 |          4 |         55 |
+| src\components\Hamburger                                                              |          1 |         41 |          0 |          4 |         45 |
+| src\components\ImageCropper                                                           |          5 |      1,968 |         99 |         14 |      2,081 |
+| src\components\ImageCropper (Files)                                                   |          1 |      1,688 |         84 |          8 |      1,780 |
+| src\components\ImageCropper\utils                                                     |          4 |        280 |         15 |          6 |        301 |
+| src\components\JsonEditor                                                             |          1 |         69 |          1 |          8 |         78 |
+| src\components\Kanban                                                                 |          1 |         91 |          2 |          7 |        100 |
+| src\components\LangSelect                                                             |          1 |         40 |          0 |          2 |         42 |
+| src\components\MDinput                                                                |          1 |        341 |         13 |          7 |        361 |
+| src\components\MarkdownEditor                                                         |          2 |        144 |          2 |          5 |        151 |
+| src\components\Pagination                                                             |          1 |         98 |          0 |          4 |        102 |
+| src\components\PanThumb                                                               |          1 |        117 |         13 |         13 |        143 |
+| src\components\RightPanel                                                             |          1 |        136 |          0 |         10 |        146 |
+| src\components\Screenfull                                                             |          1 |         57 |          0 |          4 |         61 |
+| src\components\Share                                                                  |          1 |        101 |          0 |          3 |        104 |
+| src\components\SizeSelect                                                             |          1 |         52 |          1 |          5 |         58 |
+| src\components\Sticky                                                                 |          1 |         90 |          0 |          2 |         92 |
+| src\components\SvgIcon                                                                |          1 |         57 |          1 |          5 |         63 |
+| src\components\TextHoverEffect                                                        |          1 |        100 |          1 |         13 |        114 |
+| src\components\ThemePicker                                                            |          1 |        150 |          0 |         26 |        176 |
+| src\components\Tinymce                                                                |          5 |        361 |         53 |         29 |        443 |
+| src\components\Tinymce (Files)                                                        |          4 |        254 |         52 |         25 |        331 |
+| src\components\Tinymce\components                                                     |          1 |        107 |          1 |          4 |        112 |
+| src\components\TreeSelect                                                             |          1 |        184 |          0 |         10 |        194 |
+| src\components\Upload                                                                 |          3 |        411 |          0 |         13 |        424 |
+| src\components\UploadExcel                                                            |          1 |        131 |          2 |          6 |        139 |
+| src\directive                                                                         |         12 |        370 |         21 |         72 |        463 |
+| src\directive (Files)                                                                 |          1 |         72 |          6 |         14 |         92 |
+| src\directive\clipboard                                                               |          2 |         57 |          1 |          6 |         64 |
+| src\directive\el-drag-dialog                                                          |          2 |         66 |          7 |         19 |         92 |
+| src\directive\el-table                                                                |          2 |         37 |          7 |         12 |         56 |
+| src\directive\permission                                                              |          2 |         36 |          0 |         10 |         46 |
+| src\directive\waves                                                                   |          3 |        102 |          0 |         11 |        113 |
+| src\filters                                                                           |          1 |         39 |         24 |          6 |         69 |
+| src\icons                                                                             |         56 |         65 |         14 |          8 |         87 |
+| src\icons (Files)                                                                     |          2 |         11 |         14 |          8 |         33 |
+| src\icons\svg                                                                         |         54 |         54 |          0 |          0 |         54 |
+| src\lang                                                                              |          5 |        747 |          4 |          9 |        760 |
+| src\layout                                                                            |         14 |      1,140 |         34 |        105 |      1,279 |
+| src\layout (Files)                                                                    |          1 |         93 |          0 |         10 |        103 |
+| src\layout\components                                                                 |         12 |      1,007 |         32 |         91 |      1,130 |
+| src\layout\components (Files)                                                         |          3 |        202 |         13 |         32 |        247 |
+| src\layout\components\Settings                                                        |          1 |        129 |          0 |         14 |        143 |
+| src\layout\components\Sidebar                                                         |          6 |        313 |          9 |         28 |        350 |
+| src\layout\components\TagsView                                                        |          2 |        363 |         10 |         17 |        390 |
+| src\layout\mixin                                                                      |          1 |         40 |          2 |          4 |         46 |
+| src\router                                                                            |          6 |        393 |         43 |         31 |        467 |
+| src\router (Files)                                                                    |          1 |         95 |         38 |         14 |        147 |
+| src\router\modules                                                                    |          5 |        298 |          5 |         17 |        320 |
+| src\store                                                                             |          8 |        453 |         29 |         64 |        546 |
+| src\store (Files)                                                                     |          2 |         32 |          4 |          7 |         43 |
+| src\store\modules                                                                     |          6 |        421 |         25 |         57 |        503 |
+| src\styles                                                                            |          8 |        611 |         33 |        146 |        790 |
+| src\utils                                                                             |         14 |        605 |        221 |         96 |        922 |
+| src\views                                                                             |         75 |     12,424 |        562 |        691 |     13,677 |
+| src\views\dashboard                                                                   |         14 |      1,774 |         23 |         84 |      1,881 |
+| src\views\dashboard (Files)                                                           |          1 |         29 |          0 |          3 |         32 |
+| src\views\dashboard\admin                                                             |         12 |      1,675 |         23 |         76 |      1,774 |
+| src\views\dashboard\admin (Files)                                                     |          1 |        210 |          0 |         15 |        225 |
+| src\views\dashboard\admin\components                                                  |         11 |      1,465 |         23 |         61 |      1,549 |
+| src\views\dashboard\admin\components (Files)                                          |          7 |        900 |          1 |         52 |        953 |
+| src\views\dashboard\admin\components\TodoList                                         |          3 |        506 |         18 |          7 |        531 |
+| src\views\dashboard\admin\components\mixins                                           |          1 |         59 |          4 |          2 |         65 |
+| src\views\dashboard\editor                                                            |          1 |         70 |          0 |          5 |         75 |
+| src\views\error-page                                                                  |          2 |        321 |          0 |          8 |        329 |
+| src\views\icons                                                                       |          3 |        103 |          0 |         14 |        117 |
+| src\views\login                                                                       |          3 |        350 |         54 |         35 |        439 |
+| src\views\login (Files)                                                               |          2 |        292 |         43 |         31 |        366 |
+| src\views\login\components                                                            |          1 |         58 |         11 |          4 |         73 |
+| src\views\permission                                                                  |          4 |        249 |        159 |         39 |        447 |
+| src\views\permission (Files)                                                          |          3 |        218 |        159 |         37 |        414 |
+| src\views\permission\components                                                       |          1 |         31 |          0 |          2 |         33 |
+| src\views\profile                                                                     |          5 |        425 |          0 |         48 |        473 |
+| src\views\profile (Files)                                                             |          1 |         63 |          0 |          6 |         69 |
+| src\views\profile\components                                                          |          4 |        362 |          0 |         42 |        404 |
+| src\views\redirect                                                                    |          1 |         12 |          0 |          1 |         13 |
+| src\views\system                                                                      |         19 |      4,058 |        259 |        246 |      4,563 |
+| src\views\system\sys-cost                                                             |          2 |        332 |         11 |         17 |        360 |
+| src\views\system\sys-cost (Files)                                                     |          1 |        151 |          1 |          9 |        161 |
+| src\views\system\sys-cost\components                                                  |          1 |        181 |         10 |          8 |        199 |
+| src\views\system\sys-department                                                       |          2 |        509 |         34 |         29 |        572 |
+| src\views\system\sys-department (Files)                                               |          1 |        227 |         12 |         14 |        253 |
+| src\views\system\sys-department\components                                            |          1 |        282 |         22 |         15 |        319 |
+| src\views\system\sys-dict                                                             |          4 |        685 |         31 |         64 |        780 |
+| src\views\system\sys-dict (Files)                                                     |          2 |        381 |         19 |         35 |        435 |
+| src\views\system\sys-dict\components                                                  |          2 |        304 |         12 |         29 |        345 |
+| src\views\system\sys-menu                                                             |          2 |        613 |         14 |         27 |        654 |
+| src\views\system\sys-menu (Files)                                                     |          1 |        253 |          2 |         14 |        269 |
+| src\views\system\sys-menu\components                                                  |          1 |        360 |         12 |         13 |        385 |
+| src\views\system\sys-operationlog                                                     |          2 |        325 |         10 |         20 |        355 |
+| src\views\system\sys-operationlog (Files)                                             |          1 |        148 |          0 |          8 |        156 |
+| src\views\system\sys-operationlog\components                                          |          1 |        177 |         10 |         12 |        199 |
+| src\views\system\sys-role                                                             |          3 |        668 |         76 |         43 |        787 |
+| src\views\system\sys-role (Files)                                                     |          2 |        460 |         48 |         37 |        545 |
+| src\views\system\sys-role\components                                                  |          1 |        208 |         28 |          6 |        242 |
+| src\views\system\sys-user                                                             |          4 |        926 |         83 |         46 |      1,055 |
+| src\views\system\sys-user (Files)                                                     |          1 |        324 |         42 |         17 |        383 |
+| src\views\system\sys-user\components                                                  |          3 |        602 |         41 |         29 |        672 |
+| src\views\table                                                                       |         23 |      5,024 |         67 |        205 |      5,296 |
+| src\views\table (Files)                                                               |          1 |      1,791 |         21 |         54 |      1,866 |
+| src\views\table\realTime-chart                                                        |         17 |      2,408 |         35 |         98 |      2,541 |
+| src\views\table\realTime-chart (Files)                                                |          1 |        489 |         13 |         21 |        523 |
+| src\views\table\realTime-chart\components                                             |         16 |      1,919 |         22 |         77 |      2,018 |
+| src\views\table\realTime-chart\components (Files)                                     |         12 |      1,354 |          0 |         68 |      1,422 |
+| src\views\table\realTime-chart\components\TodoList                                    |          3 |        506 |         18 |          7 |        531 |
+| src\views\table\realTime-chart\components\mixins                                      |          1 |         59 |          4 |          2 |         65 |
+| src\views\table\runtime                                                               |          5 |        825 |         11 |         53 |        889 |
+| src\views\table\runtime (Files)                                                       |          1 |        229 |          4 |         11 |        244 |
+| src\views\table\runtime\components                                                    |          4 |        596 |          7 |         42 |        645 |
+| src\views\table\runtime\components (Files)                                            |          3 |        537 |          3 |         40 |        580 |
+| src\views\table\runtime\components\mixins                                             |          1 |         59 |          4 |          2 |         65 |
+| src\views\theme                                                                       |          1 |        108 |          0 |         11 |        119 |
+| tests                                                                                 |          7 |        154 |          0 |         13 |        167 |
+| tests\unit                                                                            |          7 |        154 |          0 |         13 |        167 |
+| tests\unit (Files)                                                                    |          1 |          5 |          0 |          1 |          6 |
+| tests\unit\components                                                                 |          2 |         40 |          0 |          2 |         42 |
+| tests\unit\utils                                                                      |          4 |        109 |          0 |         10 |        119 |
++---------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++---------------------------------------------------------------------------------------+--------------------+------------+------------+------------+------------+
+| filename                                                                              | language           | code       | comment    | blank      | total      |
++---------------------------------------------------------------------------------------+--------------------+------------+------------+------------+------------+
+| e:\weichang\iot-web\.eslintrc.js                                                      | JavaScript         |        195 |          2 |          2 |        199 |
+| e:\weichang\iot-web\.github\FUNDING.yml                                               | YAML               |          2 |          1 |          2 |          5 |
+| e:\weichang\iot-web\.github\ISSUE_TEMPLATE\bug_report.md                              | Markdown           |         12 |         13 |          9 |         34 |
+| e:\weichang\iot-web\.github\ISSUE_TEMPLATE\feature_request.md                         | Markdown           |          5 |          0 |          3 |          8 |
+| e:\weichang\iot-web\.github\ISSUE_TEMPLATE\question.md                                | Markdown           |         12 |         15 |          9 |         36 |
+| e:\weichang\iot-web\.gitlab-ci.yml                                                    | YAML               |         38 |          1 |          6 |         45 |
+| e:\weichang\iot-web\.travis.yml                                                       | YAML               |          5 |          0 |          1 |          6 |
+| e:\weichang\iot-web\Dockerfile                                                        | Docker             |          4 |          0 |          0 |          4 |
+| e:\weichang\iot-web\README.es.md                                                      | Markdown           |        162 |          0 |         66 |        228 |
+| e:\weichang\iot-web\README.ja.md                                                      | Markdown           |        159 |          0 |         65 |        224 |
+| e:\weichang\iot-web\README.md                                                         | Markdown           |          1 |          0 |          0 |          1 |
+| e:\weichang\iot-web\README.zh-CN.md                                                   | Markdown           |        178 |          0 |         74 |        252 |
+| e:\weichang\iot-web\babel.config.js                                                   | JavaScript         |         10 |          4 |          1 |         15 |
+| e:\weichang\iot-web\build\index.js                                                    | JavaScript         |         28 |          0 |          8 |         36 |
+| e:\weichang\iot-web\jest.config.js                                                    | JavaScript         |         23 |          1 |          1 |         25 |
+| e:\weichang\iot-web\jsconfig.json                                                     | JSON with Comments |          9 |          0 |          0 |          9 |
+| e:\weichang\iot-web\mock\article.js                                                   | JavaScript         |        116 |          0 |         13 |        129 |
+| e:\weichang\iot-web\mock\index.js                                                     | JavaScript         |         47 |          6 |          8 |         61 |
+| e:\weichang\iot-web\mock\mock-server.js                                               | JavaScript         |         65 |          6 |         11 |         82 |
+| e:\weichang\iot-web\mock\remote-search.js                                             | JavaScript         |         49 |          2 |          5 |         56 |
+| e:\weichang\iot-web\mock\role\index.js                                                | JavaScript         |         89 |          5 |          8 |        102 |
+| e:\weichang\iot-web\mock\role\routes.js                                               | JavaScript         |        512 |          1 |         18 |        531 |
+| e:\weichang\iot-web\mock\user.js                                                      | JavaScript         |         72 |          5 |          9 |         86 |
+| e:\weichang\iot-web\mock\utils.js                                                     | JavaScript         |         35 |         11 |          3 |         49 |
+| e:\weichang\iot-web\package.json                                                      | JSON               |        102 |          0 |          1 |        103 |
+| e:\weichang\iot-web\plop-templates\component\index.hbs                                | Handlebars         |         23 |          0 |          4 |         27 |
+| e:\weichang\iot-web\plop-templates\component\prompt.js                                | JavaScript         |         53 |          0 |          3 |         56 |
+| e:\weichang\iot-web\plop-templates\store\index.hbs                                    | Handlebars         |         13 |          0 |          4 |         17 |
+| e:\weichang\iot-web\plop-templates\store\prompt.js                                    | JavaScript         |         60 |          0 |          3 |         63 |
+| e:\weichang\iot-web\plop-templates\utils.js                                           | JavaScript         |          2 |          0 |          1 |          3 |
+| e:\weichang\iot-web\plop-templates\view\index.hbs                                     | Handlebars         |         23 |          0 |          4 |         27 |
+| e:\weichang\iot-web\plop-templates\view\prompt.js                                     | JavaScript         |         53 |          0 |          3 |         56 |
+| e:\weichang\iot-web\plopfile.js                                                       | JavaScript         |          8 |          0 |          2 |         10 |
+| e:\weichang\iot-web\postcss.config.js                                                 | JavaScript         |          5 |          0 |          1 |          6 |
+| e:\weichang\iot-web\public\index.html                                                 | HTML               |         14 |          1 |          1 |         16 |
+| e:\weichang\iot-web\src\App.vue                                                       | Vue                |         10 |          0 |          2 |         12 |
+| e:\weichang\iot-web\src\api\basics\bas-dict-api.js                                    | JavaScript         |         55 |         15 |          5 |         75 |
+| e:\weichang\iot-web\src\api\deviceData.js                                             | JavaScript         |        112 |          0 |         17 |        129 |
+| e:\weichang\iot-web\src\api\dict.js                                                   | JavaScript         |          8 |          0 |          2 |         10 |
+| e:\weichang\iot-web\src\api\platform.js                                               | JavaScript         |        276 |          0 |         42 |        318 |
+| e:\weichang\iot-web\src\api\qiniu.js                                                  | JavaScript         |          7 |          0 |          2 |          9 |
+| e:\weichang\iot-web\src\api\remote-search.js                                          | JavaScript         |         15 |          0 |          3 |         18 |
+| e:\weichang\iot-web\src\api\system\download-api.js                                    | JavaScript         |         11 |          5 |          5 |         21 |
+| e:\weichang\iot-web\src\api\system\sys-auth-book-log-api.js                           | JavaScript         |         11 |          5 |          5 |         21 |
+| e:\weichang\iot-web\src\api\system\sys-cost-api.js                                    | JavaScript         |         37 |          0 |         10 |         47 |
+| e:\weichang\iot-web\src\api\system\sys-department-api.js                              | JavaScript         |         44 |         30 |         10 |         84 |
+| e:\weichang\iot-web\src\api\system\sys-order-operation-log-api.js                     | JavaScript         |         11 |          5 |          7 |         23 |
+| e:\weichang\iot-web\src\api\system\sys-permission-api.js                              | JavaScript         |         48 |         35 |         12 |         95 |
+| e:\weichang\iot-web\src\api\system\sys-role-api.js                                    | JavaScript         |         51 |         35 |         13 |         99 |
+| e:\weichang\iot-web\src\api\system\sys-user-api.js                                    | JavaScript         |         70 |         50 |         14 |        134 |
+| e:\weichang\iot-web\src\api\system\upload-api.js                                      | JavaScript         |         20 |         10 |          6 |         36 |
+| e:\weichang\iot-web\src\api\user.js                                                   | JavaScript         |         40 |          0 |          7 |         47 |
+| e:\weichang\iot-web\src\assets\custom-theme\index.css                                 | CSS                |          1 |          0 |          0 |          1 |
+| e:\weichang\iot-web\src\components\BackToTop\index.vue                                | Vue                |        105 |          0 |          7 |        112 |
+| e:\weichang\iot-web\src\components\Breadcrumb\index.vue                               | Vue                |         77 |          3 |          7 |         87 |
+| e:\weichang\iot-web\src\components\Charts\Keyboard.vue                                | Vue                |        152 |          0 |          4 |        156 |
+| e:\weichang\iot-web\src\components\Charts\LineMarker.vue                              | Vue                |        222 |          0 |          6 |        228 |
+| e:\weichang\iot-web\src\components\Charts\MixChart.vue                                | Vue                |        265 |          0 |          7 |        272 |
+| e:\weichang\iot-web\src\components\Charts\mixins\resize.js                            | JavaScript         |         48 |          4 |          5 |         57 |
+| e:\weichang\iot-web\src\components\DatePickerRange\index.vue                          | Vue                |        130 |          0 |          6 |        136 |
+| e:\weichang\iot-web\src\components\DndList\index.vue                                  | Vue                |        155 |          2 |         10 |        167 |
+| e:\weichang\iot-web\src\components\DragSelect\index.vue                               | Vue                |         59 |          2 |          5 |         66 |
+| e:\weichang\iot-web\src\components\Dropzone\index.vue                                 | Vue                |        265 |         11 |         22 |        298 |
+| e:\weichang\iot-web\src\components\ErrorLog\index.vue                                 | Vue                |         75 |          0 |          4 |         79 |
+| e:\weichang\iot-web\src\components\GithubCorner\index.vue                             | Vue                |         51 |          0 |          4 |         55 |
+| e:\weichang\iot-web\src\components\Hamburger\index.vue                                | Vue                |         41 |          0 |          4 |         45 |
+| e:\weichang\iot-web\src\components\ImageCropper\index.vue                             | Vue                |      1,688 |         84 |          8 |      1,780 |
+| e:\weichang\iot-web\src\components\ImageCropper\utils\data2blob.js                    | JavaScript         |         11 |          8 |          1 |         20 |
+| e:\weichang\iot-web\src\components\ImageCropper\utils\effectRipple.js                 | JavaScript         |         32 |          7 |          1 |         40 |
+| e:\weichang\iot-web\src\components\ImageCropper\utils\language.js                     | JavaScript         |        230 |          0 |          3 |        233 |
+| e:\weichang\iot-web\src\components\ImageCropper\utils\mimes.js                        | JavaScript         |          7 |          0 |          1 |          8 |
+| e:\weichang\iot-web\src\components\JsonEditor\index.vue                               | Vue                |         69 |          1 |          8 |         78 |
+| e:\weichang\iot-web\src\components\Kanban\index.vue                                   | Vue                |         91 |          2 |          7 |        100 |
+| e:\weichang\iot-web\src\components\LangSelect\index.vue                               | Vue                |         40 |          0 |          2 |         42 |
+| e:\weichang\iot-web\src\components\MDinput\index.vue                                  | Vue                |        341 |         13 |          7 |        361 |
+| e:\weichang\iot-web\src\components\MarkdownEditor\default-options.js                  | JavaScript         |         30 |          1 |          1 |         32 |
+| e:\weichang\iot-web\src\components\MarkdownEditor\index.vue                           | Vue                |        114 |          1 |          4 |        119 |
+| e:\weichang\iot-web\src\components\Pagination\index.vue                               | Vue                |         98 |          0 |          4 |        102 |
+| e:\weichang\iot-web\src\components\PanThumb\index.vue                                 | Vue                |        117 |         13 |         13 |        143 |
+| e:\weichang\iot-web\src\components\RightPanel\index.vue                               | Vue                |        136 |          0 |         10 |        146 |
+| e:\weichang\iot-web\src\components\Screenfull\index.vue                               | Vue                |         57 |          0 |          4 |         61 |
+| e:\weichang\iot-web\src\components\Share\DropdownMenu.vue                             | Vue                |        101 |          0 |          3 |        104 |
+| e:\weichang\iot-web\src\components\SizeSelect\index.vue                               | Vue                |         52 |          1 |          5 |         58 |
+| e:\weichang\iot-web\src\components\Sticky\index.vue                                   | Vue                |         90 |          0 |          2 |         92 |
+| e:\weichang\iot-web\src\components\SvgIcon\index.vue                                  | Vue                |         57 |          1 |          5 |         63 |
+| e:\weichang\iot-web\src\components\TextHoverEffect\Mallki.vue                         | Vue                |        100 |          1 |         13 |        114 |
+| e:\weichang\iot-web\src\components\ThemePicker\index.vue                              | Vue                |        150 |          0 |         26 |        176 |
+| e:\weichang\iot-web\src\components\Tinymce\components\EditorImage.vue                 | Vue                |        107 |          1 |          4 |        112 |
+| e:\weichang\iot-web\src\components\Tinymce\dynamicLoadScript.js                       | JavaScript         |         49 |          4 |          8 |         61 |
+| e:\weichang\iot-web\src\components\Tinymce\index.vue                                  | Vue                |        201 |         43 |         11 |        255 |
+| e:\weichang\iot-web\src\components\Tinymce\plugins.js                                 | JavaScript         |          2 |          3 |          3 |          8 |
+| e:\weichang\iot-web\src\components\Tinymce\toolbar.js                                 | JavaScript         |          2 |          2 |          3 |          7 |
+| e:\weichang\iot-web\src\components\TreeSelect\index.vue                               | Vue                |        184 |          0 |         10 |        194 |
+| e:\weichang\iot-web\src\components\UploadExcel\index.vue                              | Vue                |        131 |          2 |          6 |        139 |
+| e:\weichang\iot-web\src\components\Upload\SingleImage.vue                             | Vue                |        130 |          0 |          5 |        135 |
+| e:\weichang\iot-web\src\components\Upload\SingleImage2.vue                            | Vue                |        127 |          0 |          4 |        131 |
+| e:\weichang\iot-web\src\components\Upload\SingleImage3.vue                            | Vue                |        154 |          0 |          4 |        158 |
+| e:\weichang\iot-web\src\directive\clipboard\clipboard.js                              | JavaScript         |         47 |          1 |          2 |         50 |
+| e:\weichang\iot-web\src\directive\clipboard\index.js                                  | JavaScript         |         10 |          0 |          4 |         14 |
+| e:\weichang\iot-web\src\directive\el-drag-dialog\drag.js                              | JavaScript         |         56 |          7 |         15 |         78 |
+| e:\weichang\iot-web\src\directive\el-drag-dialog\index.js                             | JavaScript         |         10 |          0 |          4 |         14 |
+| e:\weichang\iot-web\src\directive\el-table\adaptive.js                                | JavaScript         |         27 |          7 |          8 |         42 |
+| e:\weichang\iot-web\src\directive\el-table\index.js                                   | JavaScript         |         10 |          0 |          4 |         14 |
+| e:\weichang\iot-web\src\directive\permission\index.js                                 | JavaScript         |         10 |          0 |          4 |         14 |
+| e:\weichang\iot-web\src\directive\permission\permission.js                            | JavaScript         |         26 |          0 |          6 |         32 |
+| e:\weichang\iot-web\src\directive\sticky.js                                           | JavaScript         |         72 |          6 |         14 |         92 |
+| e:\weichang\iot-web\src\directive\waves\index.js                                      | JavaScript         |         10 |          0 |          4 |         14 |
+| e:\weichang\iot-web\src\directive\waves\waves.css                                     | CSS                |         25 |          0 |          1 |         26 |
+| e:\weichang\iot-web\src\directive\waves\waves.js                                      | JavaScript         |         67 |          0 |          6 |         73 |
+| e:\weichang\iot-web\src\filters\index.js                                              | JavaScript         |         39 |         24 |          6 |         69 |
+| e:\weichang\iot-web\src\icons\index.js                                                | JavaScript         |          6 |          1 |          3 |         10 |
+| e:\weichang\iot-web\src\icons\svg\404.svg                                             | XML                |          1 |          0 |          0 |          1 |
+| e:\weichang\iot-web\src\icons\svg\alarm.svg                                           | XML                |          1 |          0 |          0 |          1 |
+| e:\weichang\iot-web\src\icons\svg\blood.svg                                           | XML                |          1 |          0 |          0 |          1 |
+| e:\weichang\iot-web\src\icons\svg\bug.svg                                             | XML                |          1 |          0 |          0 |          1 |
+| e:\weichang\iot-web\src\icons\svg\chart.svg                                           | XML                |          1 |          0 |          0 |          1 |
+| e:\weichang\iot-web\src\icons\svg\clipboard.svg                                       | XML                |          1 |          0 |          0 |          1 |
+| e:\weichang\iot-web\src\icons\svg\component.svg                                       | XML                |          1 |          0 |          0 |          1 |
+| e:\weichang\iot-web\src\icons\svg\dashboard.svg                                       | XML                |          1 |          0 |          0 |          1 |
+| e:\weichang\iot-web\src\icons\svg\documentation.svg                                   | XML                |          1 |          0 |          0 |          1 |
+| e:\weichang\iot-web\src\icons\svg\drag.svg                                            | XML                |          1 |          0 |          0 |          1 |
+| e:\weichang\iot-web\src\icons\svg\edit.svg                                            | XML                |          1 |          0 |          0 |          1 |
+| e:\weichang\iot-web\src\icons\svg\education.svg                                       | XML                |          1 |          0 |          0 |          1 |
+| e:\weichang\iot-web\src\icons\svg\email.svg                                           | XML                |          1 |          0 |          0 |          1 |
+| e:\weichang\iot-web\src\icons\svg\example.svg                                         | XML                |          1 |          0 |          0 |          1 |
+| e:\weichang\iot-web\src\icons\svg\excel.svg                                           | XML                |          1 |          0 |          0 |          1 |
+| e:\weichang\iot-web\src\icons\svg\exit-fullscreen.svg                                 | XML                |          1 |          0 |          0 |          1 |
+| e:\weichang\iot-web\src\icons\svg\eye-open.svg                                        | XML                |          1 |          0 |          0 |          1 |
+| e:\weichang\iot-web\src\icons\svg\eye.svg                                             | XML                |          1 |          0 |          0 |          1 |
+| e:\weichang\iot-web\src\icons\svg\form.svg                                            | XML                |          1 |          0 |          0 |          1 |
+| e:\weichang\iot-web\src\icons\svg\fullscreen.svg                                      | XML                |          1 |          0 |          0 |          1 |
+| e:\weichang\iot-web\src\icons\svg\guide.svg                                           | XML                |          1 |          0 |          0 |          1 |
+| e:\weichang\iot-web\src\icons\svg\heart.svg                                           | XML                |          1 |          0 |          0 |          1 |
+| e:\weichang\iot-web\src\icons\svg\icon.svg                                            | XML                |          1 |          0 |          0 |          1 |
+| e:\weichang\iot-web\src\icons\svg\international.svg                                   | XML                |          1 |          0 |          0 |          1 |
+| e:\weichang\iot-web\src\icons\svg\language.svg                                        | XML                |          1 |          0 |          0 |          1 |
+| e:\weichang\iot-web\src\icons\svg\link.svg                                            | XML                |          1 |          0 |          0 |          1 |
+| e:\weichang\iot-web\src\icons\svg\list.svg                                            | XML                |          1 |          0 |          0 |          1 |
+| e:\weichang\iot-web\src\icons\svg\lock.svg                                            | XML                |          1 |          0 |          0 |          1 |
+| e:\weichang\iot-web\src\icons\svg\message-NEW.svg                                     | XML                |          1 |          0 |          0 |          1 |
+| e:\weichang\iot-web\src\icons\svg\message.svg                                         | XML                |          1 |          0 |          0 |          1 |
+| e:\weichang\iot-web\src\icons\svg\money.svg                                           | XML                |          1 |          0 |          0 |          1 |
+| e:\weichang\iot-web\src\icons\svg\nested.svg                                          | XML                |          1 |          0 |          0 |          1 |
+| e:\weichang\iot-web\src\icons\svg\oxygen.svg                                          | XML                |          1 |          0 |          0 |          1 |
+| e:\weichang\iot-web\src\icons\svg\password.svg                                        | XML                |          1 |          0 |          0 |          1 |
+| e:\weichang\iot-web\src\icons\svg\pdf.svg                                             | XML                |          1 |          0 |          0 |          1 |
+| e:\weichang\iot-web\src\icons\svg\people.svg                                          | XML                |          1 |          0 |          0 |          1 |
+| e:\weichang\iot-web\src\icons\svg\peoples.svg                                         | XML                |          1 |          0 |          0 |          1 |
+| e:\weichang\iot-web\src\icons\svg\qq.svg                                              | XML                |          1 |          0 |          0 |          1 |
+| e:\weichang\iot-web\src\icons\svg\search.svg                                          | XML                |          1 |          0 |          0 |          1 |
+| e:\weichang\iot-web\src\icons\svg\shopping.svg                                        | XML                |          1 |          0 |          0 |          1 |
+| e:\weichang\iot-web\src\icons\svg\size.svg                                            | XML                |          1 |          0 |          0 |          1 |
+| e:\weichang\iot-web\src\icons\svg\skill.svg                                           | XML                |          1 |          0 |          0 |          1 |
+| e:\weichang\iot-web\src\icons\svg\star.svg                                            | XML                |          1 |          0 |          0 |          1 |
+| e:\weichang\iot-web\src\icons\svg\tab.svg                                             | XML                |          1 |          0 |          0 |          1 |
+| e:\weichang\iot-web\src\icons\svg\table.svg                                           | XML                |          1 |          0 |          0 |          1 |
+| e:\weichang\iot-web\src\icons\svg\temperature.svg                                     | XML                |          1 |          0 |          0 |          1 |
+| e:\weichang\iot-web\src\icons\svg\theme.svg                                           | XML                |          1 |          0 |          0 |          1 |
+| e:\weichang\iot-web\src\icons\svg\tree-table.svg                                      | XML                |          1 |          0 |          0 |          1 |
+| e:\weichang\iot-web\src\icons\svg\tree.svg                                            | XML                |          1 |          0 |          0 |          1 |
+| e:\weichang\iot-web\src\icons\svg\user.svg                                            | XML                |          1 |          0 |          0 |          1 |
+| e:\weichang\iot-web\src\icons\svg\wechat.svg                                          | XML                |          1 |          0 |          0 |          1 |
+| e:\weichang\iot-web\src\icons\svg\wristbrand.svg                                      | XML                |          1 |          0 |          0 |          1 |
+| e:\weichang\iot-web\src\icons\svg\zaixian.svg                                         | XML                |          1 |          0 |          0 |          1 |
+| e:\weichang\iot-web\src\icons\svg\zip.svg                                             | XML                |          1 |          0 |          0 |          1 |
+| e:\weichang\iot-web\src\icons\svgo.yml                                                | YAML               |          5 |         13 |          5 |         23 |
+| e:\weichang\iot-web\src\lang\en.js                                                    | JavaScript         |        175 |          0 |          1 |        176 |
+| e:\weichang\iot-web\src\lang\es.js                                                    | JavaScript         |        175 |          0 |          1 |        176 |
+| e:\weichang\iot-web\src\lang\index.js                                                 | JavaScript         |         47 |          4 |          5 |         56 |
+| e:\weichang\iot-web\src\lang\ja.js                                                    | JavaScript         |        175 |          0 |          1 |        176 |
+| e:\weichang\iot-web\src\lang\zh.js                                                    | JavaScript         |        175 |          0 |          1 |        176 |
+| e:\weichang\iot-web\src\layout\components\AppMain.vue                                 | Vue                |         48 |          3 |          7 |         58 |
+| e:\weichang\iot-web\src\layout\components\Navbar.vue                                  | Vue                |        149 |         10 |         24 |        183 |
+| e:\weichang\iot-web\src\layout\components\Settings\index.vue                          | Vue                |        129 |          0 |         14 |        143 |
+| e:\weichang\iot-web\src\layout\components\Sidebar\FixiOSBug.js                        | JavaScript         |         24 |          2 |          1 |         27 |
+| e:\weichang\iot-web\src\layout\components\Sidebar\Item.vue                            | Vue                |         38 |          0 |          4 |         42 |
+| e:\weichang\iot-web\src\layout\components\Sidebar\Link.vue                            | Vue                |         41 |          0 |          3 |         44 |
+| e:\weichang\iot-web\src\layout\components\Sidebar\Logo.vue                            | Vue                |         74 |          0 |          9 |         83 |
+| e:\weichang\iot-web\src\layout\components\Sidebar\SidebarItem.vue                     | Vue                |         85 |          6 |          8 |         99 |
+| e:\weichang\iot-web\src\layout\components\Sidebar\index.vue                           | Vue                |         51 |          1 |          3 |         55 |
+| e:\weichang\iot-web\src\layout\components\TagsView\ScrollPane.vue                     | Vue                |         81 |          4 |         10 |         95 |
+| e:\weichang\iot-web\src\layout\components\TagsView\index.vue                          | Vue                |        282 |          6 |          7 |        295 |
+| e:\weichang\iot-web\src\layout\components\index.js                                    | JavaScript         |          5 |          0 |          1 |          6 |
+| e:\weichang\iot-web\src\layout\index.vue                                              | Vue                |         93 |          0 |         10 |        103 |
+| e:\weichang\iot-web\src\layout\mixin\ResizeHandler.js                                 | JavaScript         |         40 |          2 |          4 |         46 |
+| e:\weichang\iot-web\src\main.js                                                       | JavaScript         |         37 |         10 |         15 |         62 |
+| e:\weichang\iot-web\src\permission.js                                                 | JavaScript         |         50 |         16 |         12 |         78 |
+| e:\weichang\iot-web\src\router\index.js                                               | JavaScript         |         95 |         38 |         14 |        147 |
+| e:\weichang\iot-web\src\router\modules\charts.js                                      | JavaScript         |         32 |          1 |          4 |         37 |
+| e:\weichang\iot-web\src\router\modules\components.js                                  | JavaScript         |         98 |          1 |          4 |        103 |
+| e:\weichang\iot-web\src\router\modules\nested.js                                      | JavaScript         |         62 |          1 |          4 |         67 |
+| e:\weichang\iot-web\src\router\modules\system.js                                      | JavaScript         |         73 |          1 |          2 |         76 |
+| e:\weichang\iot-web\src\router\modules\table.js                                       | JavaScript         |         33 |          1 |          3 |         37 |
+| e:\weichang\iot-web\src\settings.js                                                   | JavaScript         |          9 |         27 |          7 |         43 |
+| e:\weichang\iot-web\src\store\getters.js                                              | JavaScript         |         16 |          0 |          1 |         17 |
+| e:\weichang\iot-web\src\store\index.js                                                | JavaScript         |         16 |          4 |          6 |         26 |
+| e:\weichang\iot-web\src\store\modules\app.js                                          | JavaScript         |         61 |          0 |          5 |         66 |
+| e:\weichang\iot-web\src\store\modules\errorLog.js                                     | JavaScript         |         25 |          0 |          4 |         29 |
+| e:\weichang\iot-web\src\store\modules\permission.js                                   | JavaScript         |         51 |         10 |          9 |         70 |
+| e:\weichang\iot-web\src\store\modules\settings.js                                     | JavaScript         |         29 |          1 |          7 |         37 |
+| e:\weichang\iot-web\src\store\modules\tagsView.js                                     | JavaScript         |        147 |          2 |         12 |        161 |
+| e:\weichang\iot-web\src\store\modules\user.js                                         | JavaScript         |        108 |         12 |         20 |        140 |
+| e:\weichang\iot-web\src\styles\btn.scss                                               | SCSS               |         83 |          0 |         17 |        100 |
+| e:\weichang\iot-web\src\styles\element-ui.scss                                        | SCSS               |         64 |          6 |         15 |         85 |
+| e:\weichang\iot-web\src\styles\element-variables.scss                                 | SCSS               |         13 |         11 |         10 |         34 |
+| e:\weichang\iot-web\src\styles\index.scss                                             | SCSS               |        154 |          2 |         36 |        192 |
+| e:\weichang\iot-web\src\styles\mixin.scss                                             | SCSS               |         56 |          0 |         11 |         67 |
+| e:\weichang\iot-web\src\styles\sidebar.scss                                           | SCSS               |        180 |          6 |         41 |        227 |
+| e:\weichang\iot-web\src\styles\transition.scss                                        | SCSS               |         35 |          4 |         10 |         49 |
+| e:\weichang\iot-web\src\styles\variables.scss                                         | SCSS               |         26 |          4 |          6 |         36 |
+| e:\weichang\iot-web\src\utils\auth.js                                                 | JavaScript         |         11 |          0 |          5 |         16 |
+| e:\weichang\iot-web\src\utils\clipboard.js                                            | JavaScript         |         29 |          0 |          4 |         33 |
+| e:\weichang\iot-web\src\utils\error-log.js                                            | JavaScript         |         28 |          4 |          4 |         36 |
+| e:\weichang\iot-web\src\utils\eventBus.js                                             | JavaScript         |          2 |          1 |          2 |          5 |
+| e:\weichang\iot-web\src\utils\get-page-title.js                                       | JavaScript         |         11 |          0 |          3 |         14 |
+| e:\weichang\iot-web\src\utils\i18n.js                                                 | JavaScript         |          8 |          2 |          3 |         13 |
+| e:\weichang\iot-web\src\utils\index.js                                                | JavaScript         |        234 |         98 |         28 |        360 |
+| e:\weichang\iot-web\src\utils\myWebSocket.js                                          | JavaScript         |         97 |         18 |         14 |        129 |
+| e:\weichang\iot-web\src\utils\open-window.js                                          | JavaScript         |         12 |          9 |          5 |         26 |
+| e:\weichang\iot-web\src\utils\permission.js                                           | JavaScript         |         14 |          5 |          3 |         22 |
+| e:\weichang\iot-web\src\utils\request.js                                              | JavaScript         |         75 |         29 |          9 |        113 |
+| e:\weichang\iot-web\src\utils\scroll-to.js                                            | JavaScript         |         39 |         15 |          5 |         59 |
+| e:\weichang\iot-web\src\utils\strUtil.js                                              | JavaScript         |          6 |          1 |          1 |          8 |
+| e:\weichang\iot-web\src\utils\validate.js                                             | JavaScript         |         39 |         39 |         10 |         88 |
+| e:\weichang\iot-web\src\views\dashboard\admin\components\BarChart.vue                 | Vue                |         98 |          0 |          5 |        103 |
+| e:\weichang\iot-web\src\views\dashboard\admin\components\BoxCard.vue                  | Vue                |        114 |          0 |          5 |        119 |
+| e:\weichang\iot-web\src\views\dashboard\admin\components\LineChartMessage.vue         | Vue                |        113 |          0 |          4 |        117 |
+| e:\weichang\iot-web\src\views\dashboard\admin\components\PanelGroup.vue               | Vue                |        184 |          0 |         23 |        207 |
+| e:\weichang\iot-web\src\views\dashboard\admin\components\PieChart.vue                 | Vue                |         76 |          0 |          4 |         80 |
+| e:\weichang\iot-web\src\views\dashboard\admin\components\RaddarChart.vue              | Vue                |        112 |          0 |          5 |        117 |
+| e:\weichang\iot-web\src\views\dashboard\admin\components\TodoList\Todo.vue            | Vue                |         80 |          0 |          2 |         82 |
+| e:\weichang\iot-web\src\views\dashboard\admin\components\TodoList\index.scss          | SCSS               |        309 |         11 |          1 |        321 |
+| e:\weichang\iot-web\src\views\dashboard\admin\components\TodoList\index.vue           | Vue                |        117 |          7 |          4 |        128 |
+| e:\weichang\iot-web\src\views\dashboard\admin\components\TransactionTable.vue         | Vue                |        203 |          1 |          6 |        210 |
+| e:\weichang\iot-web\src\views\dashboard\admin\components\mixins\resize.js             | JavaScript         |         59 |          4 |          2 |         65 |
+| e:\weichang\iot-web\src\views\dashboard\admin\index.vue                               | Vue                |        210 |          0 |         15 |        225 |
+| e:\weichang\iot-web\src\views\dashboard\editor\index.vue                              | Vue                |         70 |          0 |          5 |         75 |
+| e:\weichang\iot-web\src\views\dashboard\index.vue                                     | Vue                |         29 |          0 |          3 |         32 |
+| e:\weichang\iot-web\src\views\error-page\401.vue                                      | Vue                |         96 |          0 |          4 |        100 |
+| e:\weichang\iot-web\src\views\error-page\404.vue                                      | Vue                |        225 |          0 |          4 |        229 |
+| e:\weichang\iot-web\src\views\icons\element-icons.js                                  | JavaScript         |          2 |          0 |          2 |          4 |
+| e:\weichang\iot-web\src\views\icons\index.vue                                         | Vue                |         94 |          0 |          8 |        102 |
+| e:\weichang\iot-web\src\views\icons\svg-icons.js                                      | JavaScript         |          7 |          0 |          4 |         11 |
+| e:\weichang\iot-web\src\views\login\auth-redirect.vue                                 | Vue                |         15 |          0 |          1 |         16 |
+| e:\weichang\iot-web\src\views\login\components\SocialSignin.vue                       | Vue                |         58 |         11 |          4 |         73 |
+| e:\weichang\iot-web\src\views\login\index.vue                                         | Vue                |        277 |         43 |         30 |        350 |
+| e:\weichang\iot-web\src\views\permission\components\SwitchRoles.vue                   | Vue                |         31 |          0 |          2 |         33 |
+| e:\weichang\iot-web\src\views\permission\directive.vue                                | Vue                |        101 |          0 |         11 |        112 |
+| e:\weichang\iot-web\src\views\permission\page.vue                                     | Vue                |         17 |          0 |          3 |         20 |
+| e:\weichang\iot-web\src\views\permission\role.vue                                     | Vue                |        100 |        159 |         23 |        282 |
+| e:\weichang\iot-web\src\views\profile\components\Account.vue                          | Vue                |         37 |          0 |          2 |         39 |
+| e:\weichang\iot-web\src\views\profile\components\Activity.vue                         | Vue                |        166 |          0 |         20 |        186 |
+| e:\weichang\iot-web\src\views\profile\components\Timeline.vue                         | Vue                |         42 |          0 |          2 |         44 |
+| e:\weichang\iot-web\src\views\profile\components\UserCard.vue                         | Vue                |        117 |          0 |         18 |        135 |
+| e:\weichang\iot-web\src\views\profile\index.vue                                       | Vue                |         63 |          0 |          6 |         69 |
+| e:\weichang\iot-web\src\views\redirect\index.vue                                      | Vue                |         12 |          0 |          1 |         13 |
+| e:\weichang\iot-web\src\views\system\sys-cost\components\sys-cost.vue                 | Vue                |        181 |         10 |          8 |        199 |
+| e:\weichang\iot-web\src\views\system\sys-cost\sys-cost-list.vue                       | Vue                |        151 |          1 |          9 |        161 |
+| e:\weichang\iot-web\src\views\system\sys-department\components\sys-department.vue     | Vue                |        282 |         22 |         15 |        319 |
+| e:\weichang\iot-web\src\views\system\sys-department\sys-department-list.vue           | Vue                |        227 |         12 |         14 |        253 |
+| e:\weichang\iot-web\src\views\system\sys-dict\components\sys-dict-item.vue            | Vue                |        153 |          5 |         15 |        173 |
+| e:\weichang\iot-web\src\views\system\sys-dict\components\sys-dict.vue                 | Vue                |        151 |          7 |         14 |        172 |
+| e:\weichang\iot-web\src\views\system\sys-dict\sys-dict-item-list.vue                  | Vue                |        144 |          1 |         12 |        157 |
+| e:\weichang\iot-web\src\views\system\sys-dict\sys-dict-list.vue                       | Vue                |        237 |         18 |         23 |        278 |
+| e:\weichang\iot-web\src\views\system\sys-menu\components\sys-menu.vue                 | Vue                |        360 |         12 |         13 |        385 |
+| e:\weichang\iot-web\src\views\system\sys-menu\sys-menu-list.vue                       | Vue                |        253 |          2 |         14 |        269 |
+| e:\weichang\iot-web\src\views\system\sys-operationlog\components\sys-operationlog.vue | Vue                |        177 |         10 |         12 |        199 |
+| e:\weichang\iot-web\src\views\system\sys-operationlog\sys-operationlog-list.vue       | Vue                |        148 |          0 |          8 |        156 |
+| e:\weichang\iot-web\src\views\system\sys-role\components\sys-role.vue                 | Vue                |        208 |         28 |          6 |        242 |
+| e:\weichang\iot-web\src\views\system\sys-role\sys-role-list.vue                       | Vue                |        307 |         41 |         24 |        372 |
+| e:\weichang\iot-web\src\views\system\sys-role\sys-role-menu.vue                       | Vue                |        153 |          7 |         13 |        173 |
+| e:\weichang\iot-web\src\views\system\sys-user\components\sys-user-head.vue            | Vue                |        137 |          3 |          8 |        148 |
+| e:\weichang\iot-web\src\views\system\sys-user\components\sys-user-password.vue        | Vue                |        118 |          0 |          9 |        127 |
+| e:\weichang\iot-web\src\views\system\sys-user\components\sys-user.vue                 | Vue                |        347 |         38 |         12 |        397 |
+| e:\weichang\iot-web\src\views\system\sys-user\sys-user-list.vue                       | Vue                |        324 |         42 |         17 |        383 |
+| e:\weichang\iot-web\src\views\table\device-list.vue                                   | Vue                |      1,791 |         21 |         54 |      1,866 |
+| e:\weichang\iot-web\src\views\table\realTime-chart\components\BarChart.vue            | Vue                |         98 |          0 |          5 |        103 |
+| e:\weichang\iot-web\src\views\table\realTime-chart\components\BoxCard.vue             | Vue                |        114 |          0 |          5 |        119 |
+| e:\weichang\iot-web\src\views\table\realTime-chart\components\LineChartBlood.vue      | Vue                |        137 |          0 |          3 |        140 |
+| e:\weichang\iot-web\src\views\table\realTime-chart\components\LineChartBodyTemp.vue   | Vue                |        117 |          0 |          4 |        121 |
+| e:\weichang\iot-web\src\views\table\realTime-chart\components\LineChartHeart.vue      | Vue                |        117 |          0 |          4 |        121 |
+| e:\weichang\iot-web\src\views\table\realTime-chart\components\LineChartOxygen.vue     | Vue                |        117 |          0 |          3 |        120 |
+| e:\weichang\iot-web\src\views\table\realTime-chart\components\LineChartRoll.vue       | Vue                |        117 |          0 |          3 |        120 |
+| e:\weichang\iot-web\src\views\table\realTime-chart\components\LineChartStep.vue       | Vue                |        117 |          0 |          3 |        120 |
+| e:\weichang\iot-web\src\views\table\realTime-chart\components\PanelGroup.vue          | Vue                |        179 |          0 |         26 |        205 |
+| e:\weichang\iot-web\src\views\table\realTime-chart\components\PieChart.vue            | Vue                |         76 |          0 |          4 |         80 |
+| e:\weichang\iot-web\src\views\table\realTime-chart\components\RaddarChart.vue         | Vue                |        112 |          0 |          5 |        117 |
+| e:\weichang\iot-web\src\views\table\realTime-chart\components\TodoList\Todo.vue       | Vue                |         80 |          0 |          2 |         82 |
+| e:\weichang\iot-web\src\views\table\realTime-chart\components\TodoList\index.scss     | SCSS               |        309 |         11 |          1 |        321 |
+| e:\weichang\iot-web\src\views\table\realTime-chart\components\TodoList\index.vue      | Vue                |        117 |          7 |          4 |        128 |
+| e:\weichang\iot-web\src\views\table\realTime-chart\components\TransactionTable.vue    | Vue                |         53 |          0 |          3 |         56 |
+| e:\weichang\iot-web\src\views\table\realTime-chart\components\mixins\resize.js        | JavaScript         |         59 |          4 |          2 |         65 |
+| e:\weichang\iot-web\src\views\table\realTime-chart\index.vue                          | Vue                |        489 |         13 |         21 |        523 |
+| e:\weichang\iot-web\src\views\table\runtime\components\LineChartAlarm.vue             | Vue                |        113 |          0 |          4 |        117 |
+| e:\weichang\iot-web\src\views\table\runtime\components\PanelGroup.vue                 | Vue                |        197 |          0 |         29 |        226 |
+| e:\weichang\iot-web\src\views\table\runtime\components\TransactionTable.vue           | Vue                |        227 |          3 |          7 |        237 |
+| e:\weichang\iot-web\src\views\table\runtime\components\mixins\resize.js               | JavaScript         |         59 |          4 |          2 |         65 |
+| e:\weichang\iot-web\src\views\table\runtime\index.vue                                 | Vue                |        229 |          4 |         11 |        244 |
+| e:\weichang\iot-web\src\views\theme\index.vue                                         | Vue                |        108 |          0 |         11 |        119 |
+| e:\weichang\iot-web\tests\unit\.eslintrc.js                                           | JavaScript         |          5 |          0 |          1 |          6 |
+| e:\weichang\iot-web\tests\unit\components\Hamburger.spec.js                           | JavaScript         |         18 |          0 |          1 |         19 |
+| e:\weichang\iot-web\tests\unit\components\SvgIcon.spec.js                             | JavaScript         |         22 |          0 |          1 |         23 |
+| e:\weichang\iot-web\tests\unit\utils\formatTime.spec.js                               | JavaScript         |         28 |          0 |          2 |         30 |
+| e:\weichang\iot-web\tests\unit\utils\param2Obj.spec.js                                | JavaScript         |         14 |          0 |          2 |         16 |
+| e:\weichang\iot-web\tests\unit\utils\parseTime.spec.js                                | JavaScript         |         33 |          0 |          5 |         38 |
+| e:\weichang\iot-web\tests\unit\utils\validate.spec.js                                 | JavaScript         |         34 |          0 |          1 |         35 |
+| e:\weichang\iot-web\vue.config.js                                                     | JavaScript         |         89 |         33 |          8 |        130 |
+| Total                                                                                 |                    |     26,540 |      1,545 |      2,071 |     30,156 |
++---------------------------------------------------------------------------------------+--------------------+------------+------------+------------+------------+

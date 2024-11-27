@@ -1,0 +1,44 @@
+variables: #变量
+  CENTER_CONTAINER: "iot-web"
+  CENTER_IMAGE: "iot-web"
+
+  CENTER_PORT: 81
+
+  DOCKER_TLS_CERTDIR: ""
+
+stages:
+  - build
+  - deploy
+
+build:front:
+  stage: build
+  script:
+    - echo "=============== 开始编译打包任务 ==============="
+    - git config --global url."https://".insteadOf git://
+    - npm config set registry http://registry.npmmirror.com
+    #- pnpm install  --sass_binary_site=https://npm.taobao.org/mirrors/node-sass/
+    - npm install  --sass_binary_site=https://registry.npmmirror.com
+    - npx vue-cli-service build --mode staging
+    - rm -fr /data/gitlab-runner/tmp/web
+    - mkdir -p /data/gitlab-runner/tmp/web
+    - cp -r ./dist/.  /data/gitlab-runner/tmp/web/html
+    - cp -r  Dockerfile  /data/gitlab-runner/tmp/web/
+    - ls /data/gitlab-runner/tmp/web/
+  only:
+    - master #当有代码合到主干时触发这个job
+  tags:
+    - intelligent-education-test
+  image: node:14.15.4-alpine-git
+
+deploy:front:
+  stage: deploy
+  image: docker:latest #目的是为了在docker环境下的runner能执行docker命令
+  script:
+    - docker ps -a|grep $CENTER_CONTAINER &&  docker stop $CENTER_CONTAINER && docker rm $CENTER_CONTAINER || echo "not exist"
+    - docker images |grep  $CENTER_IMAGE && docker rmi -f $CENTER_IMAGE || echo  "not exist"
+    - docker build -t $CENTER_IMAGE /data/gitlab-runner/tmp/web/
+    - docker run -it -d --name $CENTER_CONTAINER -p $CENTER_PORT:80   $CENTER_IMAGE
+  only:
+    - master
+  tags:
+    - intelligent-education-test
