@@ -597,6 +597,7 @@ poseDefine.up_dog = (postmakers) => {
 
 poseDefine.foot_bind = (postmakers) => {
   poseDefine.logBodyDirection(detectCore.bodyDerection(postmakers));
+
   //躯干和头部基本一条直线
   let angle1 = detectCore.countAngle(
     postmakers[8],
@@ -667,7 +668,7 @@ poseDefine.logBodyDirection = (direction) => {
   } else if (direction == 2) {
     console.log("右对");
   } else {
-    console.log("未知方向");
+    alert("未知方向");
   }
 };
 export default poseDefine;

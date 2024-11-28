@@ -47,6 +47,7 @@ import { Camera } from "@mediapipe/camera_utils";
 import { drawConnectors, drawLandmarks } from "@mediapipe/drawing_utils";
 import { Pose, POSE_CONNECTIONS } from "@mediapipe/pose";
 import poseDefine from "@/api/har/poseDefine.js";
+import detectCore from "@/api/har/detectCore.js";
 
 export default {
   name: "PoseMonitorPage",
@@ -60,6 +61,7 @@ export default {
       boxWidth: 600,
       img_src: Image,
       pose: Pose,
+      timer: null,
     };
   },
   computed: {
@@ -143,7 +145,26 @@ export default {
       });
       canvasCtx.restore();
 
-      this.findBehavior(results.poseLandmarks);
+      if (
+        detectCore.fullBodyInCamera(
+          results,
+          canvasElement.width,
+          canvasElement.height
+        )
+      ) {
+        //销毁timer
+        if (this.timer != null) {
+          this.timer = null;
+        }
+        //识别
+        this.findBehavior(results.poseLandmarks);
+      } else {
+        if (this.timer == null) {
+          this.timer = setInterval(() => {
+            alert("请将全身置于摄像头框中!");
+          }, 30 * 1000);
+        }
+      }
     },
     findBehavior(poseLandmarks) {
       if (

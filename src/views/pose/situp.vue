@@ -26,6 +26,7 @@ export default {
       boxHeight: 300,
       boxWidth: 300,
       direction: 0, // 仰卧起坐 0:躺下 1:为坐起
+      timer: null,
     };
   },
   // props: {
@@ -118,7 +119,26 @@ export default {
       });
       canvasCtx.restore();
 
-      this.findBehavior(results.poseLandmarks);
+      if (
+        detectCore.fullBodyInCamera(
+          results,
+          canvasElement.width,
+          canvasElement.height
+        )
+      ) {
+        //销毁timer
+        if (this.timer != null) {
+          this.timer = null;
+        }
+        //识别
+        this.findBehavior(results.poseLandmarks);
+      } else {
+        if (this.timer == null) {
+          this.timer = setInterval(() => {
+            alert("请将全身置于摄像头框中!");
+          }, 30 * 1000);
+        }
+      }
     },
     // 获取角度
     findAngle1(poseLandmarks, point = [11, 23, 25]) {

@@ -51,60 +51,24 @@ detectCore.smoothStep = (x, min, max) => {
   return x;
 };
 
-detectCore.fullBodyInCamera = (postmakers, actionType) => {
+detectCore.fullBodyInCamera = (result, width, height) => {
   //判断是不是全身，判断边缘区域的值是不是为0
+  // 坐标转换
+  let poseMarks = [];
+  for (let i = 0; i < result.poseLandmarks.length; i++) {
+    let point = [];
 
-  //左眼部
-  if (postmakers[3].x == 0 || postmakers[3].y == 0) {
-    return false;
-  }
-  // 右眼
-  if (postmakers[6].x == 0 || postmakers[6].y == 0) {
-    return false;
-  }
-  //左手
-  if (postmakers[19].x == 0 || postmakers[19].y == 0) {
-    return false;
-  }
-  //右手
-  if (postmakers[18].x == 0 || postmakers[18].y == 0) {
-    return false;
-  }
+    point.push(result.poseLandmarks[i].x * result.image.width);
+    point.push(result.poseLandmarks[i].y * result.image.height);
 
-  //左肘
-  if (postmakers[13].x == 0 || postmakers[13].y == 0) {
-    return false;
-  }
-  //右肘
-  if (postmakers[14].x == 0 || postmakers[14].y == 0) {
-    return false;
-  }
-  //左胯
-  if (postmakers[23].x == 0 || postmakers[23].y == 0) {
-    return false;
-  }
-  //右胯
-  if (postmakers[24].x == 0 || postmakers[24].y == 0) {
-    return false;
-  }
-  //左膝
-  if (postmakers[25].x == 0 || postmakers[25].y == 0) {
-    return false;
-  }
-
-  //右膝
-  if (postmakers[26].x == 0 || postmakers[26].y == 0) {
-    return false;
-  }
-
-  //左脚
-  if (postmakers[31].x == 0 || postmakers[31].y == 0) {
-    return false;
-  }
-
-  //右脚
-  if (postmakers[32].x == 0 || postmakers[32].y == 0) {
-    return false;
+    if (
+      point[0] > result.image.width ||
+      point[1] > result.image.height ||
+      point[0] < 0 ||
+      point[1] < 0
+    ) {
+      return false;
+    }
   }
   return true;
 };
@@ -113,6 +77,7 @@ detectCore.fullBodyInCamera = (postmakers, actionType) => {
 detectCore.bodyDerection = (postmakers) => {
   //根据胯部的23 24两个点进行主判断，以11，12两个点做辅助判断
   debugger;
+
   // if (postmakers[23].z > 0 && postmakers[24].z > 0) {
   //   if (postmakers[23].z - postmakers[24].z <= 0.001) {
   //     return 0;

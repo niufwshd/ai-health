@@ -1,11 +1,11 @@
 <template>
   <div class="container">
-    <video ref="input_video" class="input_video"></video>
     <canvas
       class="output_canvas"
       ref="output_canvas"
       :width="boxWidth"
       :height="boxHeight"
+      ><video ref="input_video" class="input_video"></video
     ></canvas>
     <div>counter: {{ this.counter }} 个</div>
   </div>
@@ -24,9 +24,10 @@ export default {
       canvasElement: "",
       stage: "DOWN",
       counter: 0,
-      boxHeight: 300,
-      boxWidth: 300,
+      boxHeight: 800,
+      boxWidth: 1000,
       direction: 0, // 仰卧起坐 0:躺下 1:为坐起
+      timer: null,
     };
   },
   // props: {
@@ -52,6 +53,7 @@ export default {
     });
   },
   beforeDestroy() {
+    this.timer = null;
     this.ctx = null;
     this.canvasElement = null;
   },
@@ -119,7 +121,26 @@ export default {
       });
       canvasCtx.restore();
 
-      this.findBehavior(results.poseLandmarks);
+      if (
+        detectCore.fullBodyInCamera(
+          results,
+          canvasElement.width,
+          canvasElement.height
+        )
+      ) {
+        //销毁timer
+        if (this.timer != null) {
+          this.timer = null;
+        }
+        //识别
+        this.findBehavior(results.poseLandmarks);
+      } else {
+        if (this.timer == null) {
+          this.timer = setInterval(() => {
+            alert("请将全身置于摄像头框中!");
+          }, 30 * 1000);
+        }
+      }
     }, // 引体向上对应到mediapipe的部位编号就是16，14，12（左臂），15，13，11（右臂）
     findAngle1(poseLandmarks, point = [12, 14, 16]) {
       // 获取人体姿势的3个点
