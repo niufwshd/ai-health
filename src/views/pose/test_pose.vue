@@ -100,7 +100,7 @@ export default {
       // img1.src = this.img_src;
       // //drawing of the test image - img1
       // this.img_src = new Image();
-      // this.img_src.src = "hpa/sit_think.jpg";
+      // this.img_src.src = "hpa/image/sit_think.jpg";
       // let that = this;
       // this.img_src.onload = function () {
       //   that.pose.send({ image: that.img_src });
@@ -147,50 +147,50 @@ export default {
     },
     findBehavior(poseLandmarks) {
       if (
-        this.img_src.src.indexOf("hpa/sit_think.jpg") >= 0 &&
+        this.img_src.src.indexOf("hpa/image/sit_think.jpg") >= 0 &&
         poseDefine.sit_think(poseLandmarks)
       ) {
         console.log("it is sit_think");
       } else if (
-        this.img_src.src.indexOf("hpa/stand.jpg") >= 0 &&
+        this.img_src.src.indexOf("hpa/image/stand.jpg") >= 0 &&
         poseDefine.stand_straight(poseLandmarks)
       ) {
         debugger;
         console.log("it is stand straight");
       } else if (
-        this.img_src.src.indexOf("hpa/stand_bench.jpg") >= 0 &&
+        this.img_src.src.indexOf("hpa/image/stand_bench.jpg") >= 0 &&
         poseDefine.stand_straight_bend(poseLandmarks)
       ) {
       } else if (
-        this.img_src.src.indexOf("hpa/titl_plate.jpg") >= 0 &&
+        this.img_src.src.indexOf("hpa/image/titl_plate.jpg") >= 0 &&
         poseDefine.tilt_plated(poseLandmarks)
       ) {
       } else if (
-        this.img_src.src.indexOf("hpa/triangle.jpg") >= 0 &&
+        this.img_src.src.indexOf("hpa/image/triangle.jpg") >= 0 &&
         poseDefine.triangle(poseLandmarks)
       ) {
       } else if (
-        this.img_src.src.indexOf("hpa/down_dog.jpg") >= 0 &&
+        this.img_src.src.indexOf("hpa/image/down_dog.jpg") >= 0 &&
         poseDefine.down_dog(poseLandmarks)
       ) {
       } else if (
-        this.img_src.src.indexOf("hpa/top_dog.jpg") >= 0 &&
+        this.img_src.src.indexOf("hpa/image/top_dog.jpg") >= 0 &&
         poseDefine.up_dog(poseLandmarks)
       ) {
       } else if (
-        this.img_src.src.indexOf("hpa/Warriar1.jpg") >= 0 &&
+        this.img_src.src.indexOf("hpa/image/Warriar1.jpg") >= 0 &&
         poseDefine.warrior1(poseLandmarks)
       ) {
       } else if (
-        this.img_src.src.indexOf("hpa/Warriar2.jpg") >= 0 &&
+        this.img_src.src.indexOf("hpa/image/Warriar2.jpg") >= 0 &&
         poseDefine.warrior2(poseLandmarks)
       ) {
       } else if (
-        this.img_src.src.indexOf("hpa/Warriar3.jpg") >= 0 &&
+        this.img_src.src.indexOf("hpa/image/Warriar3.jpg") >= 0 &&
         poseDefine.warrior3(poseLandmarks)
       ) {
       } else if (
-        this.img_src.src.indexOf("hpa/foot_bind.jpg") >= 0 &&
+        this.img_src.src.indexOf("hpa/image/foot_bind.jpg") >= 0 &&
         poseDefine.foot_bind(poseLandmarks)
       ) {
       }
@@ -198,7 +198,7 @@ export default {
     sit_think() {
       this.init();
       this.img_src = new Image();
-      this.img_src.src = "hpa/sit_think.jpg";
+      this.img_src.src = "hpa/image/sit_think.jpg";
       this.pose.send({ image: this.img_src });
     },
     stand_straight() {
@@ -208,7 +208,7 @@ export default {
       this.img_src.onload = function () {
         that.pose.send({ image: that.img_src });
       };
-      that.img_src.src = "hpa/stand.jpg";
+      that.img_src.src = "hpa/image/stand.jpg";
     },
     stand_straight_bend() {
       this.init();
@@ -217,7 +217,7 @@ export default {
       this.img_src.onload = function () {
         that.pose.send({ image: that.img_src });
       };
-      this.img_src.src = "hpa/stand_bench.jpg";
+      this.img_src.src = "hpa/image/stand_bench.jpg";
     },
     tilt_plated() {
       this.init();
@@ -226,7 +226,7 @@ export default {
       this.img_src.onload = function () {
         that.pose.send({ image: that.img_src });
       };
-      this.img_src.src = "hpa/titl_plate.jpg";
+      this.img_src.src = "hpa/image/titl_plate.jpg";
     },
     down_dog() {
       this.init();
@@ -235,7 +235,7 @@ export default {
       this.img_src.onload = function () {
         that.pose.send({ image: that.img_src });
       };
-      this.img_src.src = "hpa/down_dog.jpg";
+      this.img_src.src = "hpa/image/down_dog.jpg";
     },
     up_dog() {
       this.init();
@@ -244,7 +244,7 @@ export default {
       this.img_src.onload = function () {
         that.pose.send({ image: that.img_src });
       };
-      this.img_src.src = "hpa/top_dog.jpg";
+      this.img_src.src = "hpa/image/top_dog.jpg";
     },
     triangular() {
       this.init();
@@ -253,7 +253,7 @@ export default {
       this.img_src.onload = function () {
         that.pose.send({ image: that.img_src });
       };
-      this.img_src.src = "hpa/triangle.jpg";
+      this.img_src.src = "hpa/image/triangle.jpg";
     },
     Warrior1() {
       this.init();
@@ -262,7 +262,7 @@ export default {
       this.img_src.onload = function () {
         that.pose.send({ image: that.img_src });
       };
-      this.img_src.src = "hpa/Warriar1.jpg";
+      this.img_src.src = "hpa/image/Warriar1.jpg";
     },
     Warrior2() {
       this.init();
@@ -271,7 +271,7 @@ export default {
       this.img_src.onload = function () {
         that.pose.send({ image: that.img_src });
       };
-      this.img_src.src = "hpa/Warriar2.jpg";
+      this.img_src.src = "hpa/image/Warriar2.jpg";
     },
     Warrior3() {
       this.init();
@@ -280,7 +280,7 @@ export default {
       this.img_src.onload = function () {
         that.pose.send({ image: that.img_src });
       };
-      this.img_src.src = "hpa/Warriar3.jpg";
+      this.img_src.src = "hpa/image/Warriar3.jpg";
     },
     foot_bind() {
       this.init();
@@ -289,7 +289,7 @@ export default {
       this.img_src.onload = function () {
         that.pose.send({ image: that.img_src });
       };
-      this.img_src.src = "hpa/foot_bind.jpg";
+      this.img_src.src = "hpa/image/foot_bind.jpg";
     },
   },
 };

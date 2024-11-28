@@ -4,6 +4,7 @@ const poseDefine = {};
 
 // 1. 简单坐 - 冥想  男左女右原则 ，以女性为例
 poseDefine.sit_think = (postmakers) => {
+  poseDefine.logBodyDirection(detectCore.bodyDerection(postmakers));
   //躯干和头部基本一条直线
   let angle1 = detectCore.countAngle(
     postmakers[8],
@@ -45,8 +46,7 @@ poseDefine.sit_think = (postmakers) => {
 //山式
 poseDefine.stand_straight = (postmakers) => {
   //躯干和头部基本一条直线
-
-  debugger;
+  poseDefine.logBodyDirection(detectCore.bodyDerection(postmakers));
   let angle1 = detectCore.countAngle(
     postmakers[8],
     postmakers[12],
@@ -91,6 +91,7 @@ poseDefine.stand_straight = (postmakers) => {
 
 //站立前屈
 poseDefine.stand_straight_bend = (postmakers) => {
+  poseDefine.logBodyDirection(detectCore.bodyDerection(postmakers));
   //躯干和头部基本一条直线
   let angle1 = detectCore.countAngle(
     postmakers[8],
@@ -136,7 +137,7 @@ poseDefine.stand_straight_bend = (postmakers) => {
 
 //三角式
 poseDefine.triangle = (postmakers) => {
-  debugger;
+  poseDefine.logBodyDirection(detectCore.bodyDerection(postmakers));
   //躯干和头部基本一条直线
   let angle1 = detectCore.countAngle(
     postmakers[8],
@@ -200,8 +201,8 @@ poseDefine.triangle = (postmakers) => {
 };
 
 poseDefine.warrior1 = (postmakers) => {
+  poseDefine.logBodyDirection(detectCore.bodyDerection(postmakers));
   //躯干和头部基本一条直线
-  debugger;
   let angle1 = detectCore.countAngle(
     postmakers[8],
     postmakers[12],
@@ -268,7 +269,7 @@ poseDefine.warrior1 = (postmakers) => {
 };
 
 poseDefine.warrior2 = (postmakers) => {
-  debugger;
+  poseDefine.logBodyDirection(detectCore.bodyDerection(postmakers));
   //躯干和头部基本一条直线
   let angle1 = detectCore.countAngle(
     postmakers[8],
@@ -336,8 +337,8 @@ poseDefine.warrior2 = (postmakers) => {
 };
 
 poseDefine.warrior3 = (postmakers) => {
+  poseDefine.logBodyDirection(detectCore.bodyDerection(postmakers));
   //躯干和头部基本一条直线
-  debugger;
   // let angle1 = detectCore.countAngle(
   //   postmakers[8],
   //   postmakers[12],
@@ -405,7 +406,7 @@ poseDefine.warrior3 = (postmakers) => {
 };
 
 poseDefine.tilt_plated = (postmakers) => {
-  debugger;
+  poseDefine.logBodyDirection(detectCore.bodyDerection(postmakers));
   //躯干和头部基本一条直线
   let angle1 = detectCore.countAngle(
     postmakers[8],
@@ -457,7 +458,7 @@ poseDefine.tilt_plated = (postmakers) => {
 };
 
 poseDefine.down_dog = (postmakers) => {
-  debugger;
+  poseDefine.logBodyDirection(detectCore.bodyDerection(postmakers));
   //躯干和头部基本一条直线
   let angle1 = detectCore.countAngle(
     postmakers[8],
@@ -510,7 +511,7 @@ poseDefine.down_dog = (postmakers) => {
 };
 
 poseDefine.up_dog = (postmakers) => {
-  debugger;
+  poseDefine.logBodyDirection(detectCore.bodyDerection(postmakers));
   //躯干和头部基本一条直线
   let angle1 = detectCore.countAngle(
     postmakers[8],
@@ -595,7 +596,7 @@ poseDefine.up_dog = (postmakers) => {
 };
 
 poseDefine.foot_bind = (postmakers) => {
-  debugger;
+  poseDefine.logBodyDirection(detectCore.bodyDerection(postmakers));
   //躯干和头部基本一条直线
   let angle1 = detectCore.countAngle(
     postmakers[8],
@@ -657,5 +658,16 @@ poseDefine.foot_bind = (postmakers) => {
   }
 
   return true;
+};
+poseDefine.logBodyDirection = (direction) => {
+  if (direction == 0) {
+    console.log("面对");
+  } else if (direction == 1) {
+    console.log("左对");
+  } else if (direction == 2) {
+    console.log("右对");
+  } else {
+    console.log("未知方向");
+  }
 };
 export default poseDefine;

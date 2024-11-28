@@ -109,4 +109,76 @@ detectCore.fullBodyInCamera = (postmakers, actionType) => {
   return true;
 };
 
+// 判断身体式面对、左侧对、右侧对、还是背对相机 或者式其他方向 分别用0，1.2,3 4表示
+detectCore.bodyDerection = (postmakers) => {
+  //根据胯部的23 24两个点进行主判断，以11，12两个点做辅助判断
+  debugger;
+  // if (postmakers[23].z > 0 && postmakers[24].z > 0) {
+  //   if (postmakers[23].z - postmakers[24].z <= 0.001) {
+  //     return 0;
+  //   }
+  // }
+  if (postmakers[23].visibility > 0.99 && postmakers[24].visibility > 0.99) {
+    if (postmakers[11].visibility > 0.99 && postmakers[12].visibility > 0.99)
+      if (
+        Math.abs(postmakers[23].z - postmakers[24].z) < 0.3 &&
+        Math.abs(postmakers[11].z - postmakers[12].z) < 0.3
+      ) {
+        return 0;
+      }
+  }
+
+  if (postmakers[23].z < 0 && postmakers[24].z > 0) {
+    if (postmakers[23].z + postmakers[24].z <= 0.001) {
+      return 1;
+    }
+  }
+
+  if (postmakers[23].z > 0 && postmakers[24].z < 0) {
+    if (postmakers[23].z + postmakers[24].z <= 0.001) {
+      return 2;
+    }
+  }
+
+  //辅助判断
+  if (postmakers[23].z > 0 && postmakers[24].z > 0) {
+    if (postmakers[23].z - postmakers[24].z <= 0.002) {
+      if (
+        postmakers[11].z > 0 &&
+        postmakers[12].z > 0 &&
+        postmakers[11].z - postmakers[12].z <= 0.002
+      ) {
+        return 0;
+      }
+    }
+  }
+  //辅助判断左侧对相机
+  if (postmakers[23].z < 0 && postmakers[24].z > 0) {
+    if (postmakers[23].z + postmakers[24].z <= 0.002) {
+      if (
+        postmakers[11].z < 0 &&
+        postmakers[12].z > 0 &&
+        postmakers[11].z + postmakers[12].z <= 0.002
+      ) {
+        return 1;
+      }
+    }
+  }
+
+  //辅助判断左侧对相机
+  if (postmakers[23].z > 0 && postmakers[24].z < 0) {
+    if (postmakers[23].z + postmakers[24].z <= 0.002) {
+      if (
+        postmakers[11].z > 0 &&
+        postmakers[12].z < 0 &&
+        postmakers[11].z + postmakers[12].z <= 0.002
+      ) {
+        return 2;
+      }
+    }
+  }
+
+  return 4;
+};
+
 export default detectCore;
