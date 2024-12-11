@@ -1,11 +1,11 @@
 <template>
   <div class="container">
-    <video ref="input_video" class="input_video"></video>
     <canvas
       class="output_canvas"
       ref="output_canvas"
       :width="boxWidth"
       :height="boxHeight"
+      ><video ref="input_video" class="input_video"></video
     ></canvas>
     <div>counter: {{ this.counter }} 个</div>
   </div>
@@ -14,6 +14,7 @@
 import { Camera } from "@mediapipe/camera_utils";
 import { drawConnectors, drawLandmarks } from "@mediapipe/drawing_utils";
 import { Pose, POSE_CONNECTIONS } from "@mediapipe/pose";
+import detectCore from "@/api/har/detectCore.js";
 
 export default {
   name: "PoseMonitorPage",
@@ -23,8 +24,8 @@ export default {
       canvasElement: "",
       stage: "DOWN",
       counter: 0,
-      boxHeight: 300,
-      boxWidth: 300,
+      boxHeight: 800,
+      boxWidth: 1000,
       direction: 0, // 仰卧起坐 0:躺下 1:为坐起
       timer: null,
     };
@@ -136,7 +137,7 @@ export default {
         if (this.timer == null) {
           this.timer = setInterval(() => {
             alert("请将全身置于摄像头框中!");
-          }, 30 * 1000);
+          }, 60 * 1000);
         }
       }
     },

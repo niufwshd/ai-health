@@ -121,26 +121,26 @@ export default {
       });
       canvasCtx.restore();
 
-      if (
-        detectCore.fullBodyInCamera(
-          results,
-          canvasElement.width,
-          canvasElement.height
-        )
-      ) {
-        //销毁timer
-        if (this.timer != null) {
-          this.timer = null;
-        }
-        //识别
-        this.findBehavior(results.poseLandmarks);
-      } else {
-        if (this.timer == null) {
-          this.timer = setInterval(() => {
-            alert("请将全身置于摄像头框中!");
-          }, 30 * 1000);
-        }
-      }
+      // if (
+      //   detectCore.fullBodyInCamera(
+      //     results,
+      //     canvasElement.width,
+      //     canvasElement.height
+      //   )
+      // ) {
+      //   //销毁timer
+      //   if (this.timer != null) {
+      //     this.timer = null;
+      //   }
+      //识别
+      this.findBehavior(results.poseLandmarks);
+      // } else {
+      //   if (this.timer == null) {
+      //     this.timer = setInterval(() => {
+      //       alert("请将全身置于摄像头框中!");
+      //     }, 30 * 1000);
+      //   }
+      // }
     }, // 引体向上对应到mediapipe的部位编号就是16，14，12（左臂），15，13，11（右臂）
     findAngle1(poseLandmarks, point = [12, 14, 16]) {
       // 获取人体姿势的3个点
@@ -186,7 +186,7 @@ export default {
     findBehavior(poseLandmarks) {
       const angle1 = this.findAngle1(poseLandmarks);
       const angle2 = this.findAngle2(poseLandmarks);
-      //console.log(angle1 + "," + angle2);
+      console.log(angle1 + "," + angle2);
       let right_per = detectCore.smoothStep(angle1, 40, 140);
       let left_per = detectCore.smoothStep(angle2, 40, 140);
       console.log(right_per + "," + left_per);

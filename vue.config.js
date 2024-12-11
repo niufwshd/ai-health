@@ -57,6 +57,16 @@ module.exports = {
         "@": resolve("src"),
       },
     },
+    module: {
+      rules: [
+        {
+          test: /\.js$/,
+          use: {
+            loader: "@open-wc/webpack-import-meta-loader",
+          },
+        },
+      ],
+    },
   },
   chainWebpack(config) {
     // it can improve the speed of the first screen, it is recommended to turn on preload

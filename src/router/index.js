@@ -148,6 +148,32 @@ export const asyncRoutes = [
         name: "test_pose",
         meta: { title: "测试姿势", icon: "theme" },
       },
+      {
+        path: "three",
+        name: "three",
+        meta: { title: "3D", icon: "theme" },
+        component: () => import("@/views/pose/animate"),
+        children: [
+          {
+            path: "skin",
+            //component: () => import("@/views/pose/three"),
+            name: "skin",
+            meta: { title: "3D换肤", icon: "theme" },
+          },
+          {
+            path: "animate",
+            component: () => import("@/views/pose/animate"),
+            name: "animate",
+            meta: { title: "3D动画", icon: "theme" },
+          },
+        ],
+      },
+      {
+        path: "test_video",
+        component: () => import("@/views/pose/test_video"),
+        name: "test_video",
+        meta: { title: "测试视频", icon: "theme" },
+      },
     ],
   },
   {

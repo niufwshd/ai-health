@@ -40,7 +40,7 @@ detectCore.countAngle = (point1, point2, point3) => {
 
   let angle = (Math.acos(top / bottom) * 180) / Math.PI;
   // 4.最后求解
-  console.log(angle);
+  //console.log(angle);
   return angle;
 };
 
@@ -76,8 +76,6 @@ detectCore.fullBodyInCamera = (result, width, height) => {
 // 判断身体式面对、左侧对、右侧对、还是背对相机 或者式其他方向 分别用0，1.2,3 4表示
 detectCore.bodyDerection = (postmakers) => {
   //根据胯部的23 24两个点进行主判断，以11，12两个点做辅助判断
-  debugger;
-
   // if (postmakers[23].z > 0 && postmakers[24].z > 0) {
   //   if (postmakers[23].z - postmakers[24].z <= 0.001) {
   //     return 0;

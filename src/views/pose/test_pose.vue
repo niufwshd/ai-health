@@ -176,7 +176,6 @@ export default {
         this.img_src.src.indexOf("hpa/image/stand.jpg") >= 0 &&
         poseDefine.stand_straight(poseLandmarks)
       ) {
-        debugger;
         console.log("it is stand straight");
       } else if (
         this.img_src.src.indexOf("hpa/image/stand_bench.jpg") >= 0 &&

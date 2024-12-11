@@ -14,6 +14,7 @@
 import { Camera } from "@mediapipe/camera_utils";
 import { drawConnectors, drawLandmarks } from "@mediapipe/drawing_utils";
 import { Pose, POSE_CONNECTIONS } from "@mediapipe/pose";
+import detectCore from "@/api/har/detectCore.js";
 
 export default {
   name: "PoseMonitorPage",

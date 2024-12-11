@@ -1,11 +1,12 @@
 <template>
   <div class="container">
-    <video ref="input_video" class="input_video"></video>
     <canvas
       class="output_canvas"
       ref="output_canvas"
       :width="boxWidth"
       :height="boxHeight"
+    >
+      <video ref="input_video" class="input_video"></video
     ></canvas>
     <div>counter: {{ this.counter }} 个</div>
   </div>
@@ -14,7 +15,7 @@
 import { Camera } from "@mediapipe/camera_utils";
 import { drawConnectors, drawLandmarks } from "@mediapipe/drawing_utils";
 import { Pose, POSE_CONNECTIONS } from "@mediapipe/pose";
-
+import detectCore from "@/api/har/detectCore.js";
 export default {
   name: "PoseMonitorPage",
   data() {
@@ -23,10 +24,11 @@ export default {
       canvasElement: "",
       stage: "DOWN",
       counter: 0,
-      boxHeight: 300,
-      boxWidth: 300,
+      boxHeight: 800,
+      boxWidth: 1000,
       direction: 0, // 仰卧起坐 0:躺下 1:为坐起
       timer: null,
+      theta1: 0,
     };
   },
   // props: {
@@ -119,26 +121,26 @@ export default {
       });
       canvasCtx.restore();
 
-      if (
-        detectCore.fullBodyInCamera(
-          results,
-          canvasElement.width,
-          canvasElement.height
-        )
-      ) {
-        //销毁timer
-        if (this.timer != null) {
-          this.timer = null;
-        }
-        //识别
-        this.findBehavior(results.poseLandmarks);
-      } else {
-        if (this.timer == null) {
-          this.timer = setInterval(() => {
-            alert("请将全身置于摄像头框中!");
-          }, 30 * 1000);
-        }
-      }
+      // if (
+      //   detectCore.fullBodyInCamera(
+      //     results,
+      //     canvasElement.width,
+      //     canvasElement.height
+      //   )
+      // ) {
+      //   //销毁timer
+      //   if (this.timer != null) {
+      //     this.timer = null;
+      //   }
+      //识别
+      this.findBehavior(results.poseLandmarks);
+      // } else {
+      //   if (this.timer == null) {
+      //     this.timer = setInterval(() => {
+      //       alert("请将全身置于摄像头框中!");
+      //     }, 30 * 1000);
+      //   }
+      // }
     },
     // 下蹲对应mediapipe的部位编号就是24，26，28（左腿），23，25，27（右腿）
     findAngle1(poseLandmarks, point = [24, 26, 28]) {
@@ -183,19 +185,21 @@ export default {
     },
     // 检测动作，获取次数
     findBehavior(poseLandmarks) {
-      const angle1 = this.findAngle1(poseLandmarks);
+      const angle = detectCore.countAngle(
+        poseLandmarks[14],
+        poseLandmarks[12],
+        poseLandmarks[24]
+      );
+      console.log(angle);
       //const angle2 = this.findAngle2(poseLandmarks);
-
-      if (angle1 <= 55) {
-        if (this.direction == 0) {
-          this.counter += 0.5;
-          this.direction = 1;
-        }
+      if (angle < 50) {
+        this.theta1 = angle;
       }
-      if (angle1 > 120) {
-        if (this.direction == 1) {
-          this.counter += 0.5;
-          this.direction = 0;
+      if (angle > 130) {
+        if (this.theta1 < 50) {
+          console.log("jumping-angle:" + angle);
+          this.counter += 1;
+          this.theta1 = angle;
         }
       }
       const canvasCtx = this.ctx;
