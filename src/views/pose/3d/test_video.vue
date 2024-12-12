@@ -9,7 +9,7 @@
       loop
       muted
     >
-      <source src="sofa/video/1.mp4" type="video/mp4" />
+      <source src="sofa/video/jumpjack.mp4" type="video/mp4" />
       <p>This browser does not support the video element.</p>
     </video>
     <canvas
