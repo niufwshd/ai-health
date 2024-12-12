@@ -27,7 +27,6 @@ import { Camera } from "@mediapipe/camera_utils";
 import { drawConnectors, drawLandmarks } from "@mediapipe/drawing_utils";
 import { Pose, POSE_CONNECTIONS } from "@mediapipe/pose";
 import detectCore from "@/api/har/detectCore.js";
-
 export default {
   name: "PoseMonitorPage",
   data() {
@@ -40,6 +39,7 @@ export default {
       boxWidth: 500,
       direction: 0, // 仰卧起坐 0:躺下 1:为坐起
       timer: null,
+      theta1: 0,
     };
   },
   // props: {
@@ -86,39 +86,7 @@ export default {
       });
       pose.onResults(this.onResults);
 
-      // const camera = new Camera(this.inputVideo, {
-      //   onFrame: async () => {
-      //     await pose.send({ image: this.inputVideo });
-      //   },
-      //   width: this.boxWidth,
-      //   height: this.boxHeight,
-      // });
-      // camera.start();
-
       const vid = document.getElementById("input_video");
-      //leftVideo.currentTime = TIME_IN_SECONDS;
-      // leftVideo.addEventListener("canplay", () => {
-      //   let stream;
-      //   const fps = 20;
-      //   if (leftVideo.captureStream) {
-      //     stream = leftVideo.captureStream(fps);
-      //   } else if (leftVideo.mozCaptureStream) {
-      //     stream = leftVideo.mozCaptureStream(fps);
-      //   } else {
-      //     console.error("Stream capture is not supported");
-      //     stream = null;
-      //   }
-      //   // this.ctx.drawImage(
-      //   //   leftVideo,
-      //   //   0,
-      //   //   0,
-      //   //   this.canvasElement.width,
-      //   //   this.canvasElement.height
-      //   // );
-      //   //let img = this.canvasElement.toDataURL("image/jpeg");
-      //   pose.send({ image: this.$refs.input_video });
-      // });
-
       if (vid.requestVideoFrameCallback) {
         // vid.play();
         const drawingLoop = (timestamp, frame) => {
@@ -184,29 +152,29 @@ export default {
       });
       canvasCtx.restore();
 
-      if (
-        detectCore.fullBodyInCamera(
-          results,
-          canvasElement.width,
-          canvasElement.height
-        )
-      ) {
-        //销毁timer
-        if (this.timer != null) {
-          this.timer = null;
-        }
-        //识别
-        this.findBehavior(results.poseLandmarks);
-      } else {
-        if (this.timer == null) {
-          this.timer = setInterval(() => {
-            alert("请将全身置于摄像头框中!");
-          }, 30 * 1000);
-        }
-      }
+      // if (
+      //   detectCore.fullBodyInCamera(
+      //     results,
+      //     canvasElement.width,
+      //     canvasElement.height
+      //   )
+      // ) {
+      //   //销毁timer
+      //   if (this.timer != null) {
+      //     this.timer = null;
+      //   }
+      //识别
+      this.findBehavior(results.poseLandmarks);
+      // } else {
+      //   if (this.timer == null) {
+      //     this.timer = setInterval(() => {
+      //       alert("请将全身置于摄像头框中!");
+      //     }, 30 * 1000);
+      //   }
+      // }
     },
-    // 获取角度
-    findAngle1(poseLandmarks, point = [11, 23, 25]) {
+    // 下蹲对应mediapipe的部位编号就是24，26，28（左腿），23，25，27（右腿）
+    findAngle1(poseLandmarks, point = [24, 26, 28]) {
       // 获取人体姿势的3个点
       const p1 = poseLandmarks[point[0]];
       const p2 = poseLandmarks[point[1]];
@@ -248,21 +216,21 @@ export default {
     },
     // 检测动作，获取次数
     findBehavior(poseLandmarks) {
-      const angle1 = this.findAngle1(poseLandmarks);
-      const angle2 = this.findAngle2(poseLandmarks);
-
-      // 角度大于120度默认为躺下
-      if (angle1 <= 55) {
-        if (this.direction == 0) {
-          this.counter += 0.5;
-          this.direction = 1;
-        }
+      const angle = detectCore.countAngle(
+        poseLandmarks[14],
+        poseLandmarks[12],
+        poseLandmarks[24]
+      );
+      console.log(angle);
+      //const angle2 = this.findAngle2(poseLandmarks);
+      if (angle < 50) {
+        this.theta1 = angle;
       }
-      // 角度小于60度默认为上身已经前倾
-      if (angle1 > 120) {
-        if (this.direction == 1) {
-          this.counter += 0.5;
-          this.direction = 0;
+      if (angle > 130) {
+        if (this.theta1 < 50) {
+          console.log("jumping-angle:" + angle);
+          this.counter += 1;
+          this.theta1 = angle;
         }
       }
       const canvasCtx = this.ctx;
@@ -284,7 +252,7 @@ export default {
 </script>
 <style>
 .input_video {
-  width: 400px;
-  height: 300px;
+  width: 500px;
+  height: 400px;
 }
 </style>
