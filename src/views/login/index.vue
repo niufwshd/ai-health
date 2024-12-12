@@ -9,7 +9,7 @@
       label-position="left"
     >
       <div class="title-container">
-        <h3 class="title">未尝IOT平台登录</h3>
+        <h3 class="title">AI体健登录</h3>
         <lang-select class="set-language" />
       </div>
 

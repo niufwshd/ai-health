@@ -1,29 +1,6 @@
 <template>
   <div>
     <div id="canvas" ref="canvas" class="container"></div>
-    <div class="right">
-      <div
-        class="box"
-        v-for="(item, index) in textureArr"
-        :key="index"
-        @click.stop.prevent="changeMeshTexture(item)"
-      >
-        <div
-          v-if="item.type === 'color'"
-          :style="{
-            backgroundColor: item.texture,
-            width: '100%',
-            height: '100%',
-          }"
-        ></div>
-        <img
-          v-else-if="item.type === 'image'"
-          :src="item.texture"
-          width="50"
-          height="50"
-        />
-      </div>
-    </div>
   </div>
 </template>
 
@@ -37,8 +14,6 @@ import { RenderPass } from "three/examples/jsm/postprocessing/RenderPass";
 import { OutlinePass } from "three/examples/jsm/postprocessing/OutlinePass";
 import Stats from "stats.js";
 import { ref, nextTick } from "vue";
-import getAssetsFile from "@/utils/util";
-import gsap from "gsap";
 
 export default {
   name: "three3D",
@@ -56,7 +31,6 @@ export default {
       composer: null, // 效果合成器
       outlinePass: OutlinePass,
       modelData: THREE.Group,
-      textureArr: [],
       mouse: THREE.Vector2,
       intersects: null,
       ambientLight: null,
@@ -75,78 +49,8 @@ export default {
     that.textureLoader = new THREE.TextureLoader(); // 纹理加载器
     that.raycaster = new THREE.Raycaster(); // 射线检测器
     that.canvas = that.$refs["canvas"];
-    // 贴图数据集合
-    that.textureArr = [
-      {
-        type: "color",
-        texture: "rgb(137, 78, 84)",
-      },
-      {
-        type: "color",
-        texture: "rgb(231, 124, 142)",
-      },
-      {
-        type: "color",
-        texture: "rgb(188, 132, 168)",
-      },
-      {
-        type: "color",
-        texture: "rgb(82, 82, 136)",
-      },
-      {
-        type: "color",
-        texture: "rgb(26, 148, 188)",
-      },
-      {
-        type: "image",
-        texture: getAssetsFile("sofa/texture/Fabric_035_basecolor.jpg"),
-      },
-      {
-        type: "image",
-        texture: getAssetsFile("sofa/texture/White fabric_200_DB.jpg"),
-      },
-      {
-        type: "image",
-        texture: getAssetsFile("sofa/texture/Fabric_036_basecolor.jpg"),
-      },
-      {
-        type: "image",
-        texture: getAssetsFile("sofa/texture/Fabric_Rug_006_COLOR.jpg"),
-      },
-      {
-        type: "image",
-        texture: getAssetsFile("sofa/texture/Fabric_Knitted_004_basecolor.jpg"),
-      },
-      {
-        type: "image",
-        texture: getAssetsFile(
-          "sofa/texture/Fabric_Alcantara_001_basecolor.jpg"
-        ),
-      },
-      {
-        type: "image",
-        texture: getAssetsFile("sofa/texture/Wood_Wicker_009_basecolor.jpg"),
-      },
-      {
-        type: "image",
-        texture: getAssetsFile("sofa/texture/Wood_026_basecolor.jpg"),
-      },
-      {
-        type: "image",
-        texture: getAssetsFile("sofa/texture/Wood_025_basecolor.jpg"),
-      },
-      {
-        type: "image",
-        texture: getAssetsFile("sofa/texture/Bark_06_basecolor.jpg"),
-      },
-      {
-        type: "image",
-        texture: getAssetsFile("sofa/texture/Merano_diffuse_02.jpg"),
-      },
-    ];
 
     that.clock = new THREE.Clock();
-    window.addEventListener("click", that.selectMesh, false);
 
     that.$nextTick(() => {
       that.initScene();
@@ -301,57 +205,6 @@ export default {
         }
       );
     },
-    // 物体选中
-    selectMesh(event) {
-      // 创建鼠标向量
-      let that = this;
-      that.mouse = new THREE.Vector2();
-      // 计算鼠标点击位置的归一化设备坐标（NDC）
-      // NDC 坐标系的范围是 [-1, 1]，左下角为 (-1, -1)，右上角为 (1, 1)
-      if (!that.canvas) return;
-
-      that.mouse.x = (event.clientX / that.canvas.clientWidth) * 2 - 1;
-      that.mouse.y = -(event.clientY / that.canvas.clientHeight) * 2 + 1;
-
-      // 更新射线的起点和方向
-      that.raycaster.setFromCamera(that.mouse, that.camera);
-
-      // 执行射线与物体的相交测试
-      that.intersects = that.raycaster.intersectObjects(that.scene.children);
-
-      // 检查是否有相交的物体
-      if (that.intersects.length > 0) {
-        that.selectedObject = that.intersects[0].object;
-        if (that.selectedObject.name === "plane") {
-          that.outlinePass.selectedObjects = [];
-          return;
-        }
-        that.outlinePass.selectedObjects = [that.selectedObject];
-      } else {
-        that.outlinePass.selectedObjects = [];
-      }
-    },
-    // 点击更改贴图
-    changeMeshTexture(textureData) {
-      let that = this;
-      if (that.outlinePass.selectedObjects.length === 0) return;
-      let meshName = that.outlinePass.selectedObjects[0].name;
-      that.mesh = that.modelData.getObjectByName(meshName);
-      if (textureData.type === "color") {
-        that.color = new THREE.Color(textureData.texture);
-        that.material = that.mesh.material;
-        that.material.color.set(that.color);
-        that.material.map = null;
-        that.material.needsUpdate = true;
-      } else if (textureData.type === "image") {
-        that.material = that.mesh.material;
-        that.textureLoader.load(textureData.texture, (texture) => {
-          that.material.color.set(new THREE.Color(1, 1, 1));
-          that.material.map = texture;
-          that.material.needsUpdate = true;
-        });
-      }
-    },
   },
 };
 </script>
@@ -369,7 +222,7 @@ export default {
   height: 50px;
 }
 .container {
-  height: 1000px;
+  height: 800px;
   width: 1000px;
   background-color: #fafafa;
   position: fixed;

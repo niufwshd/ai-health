@@ -1,5 +1,5 @@
 module.exports = {
-  title: '未尝IOT平台',
+  title: "AI体健",
 
   /**
    * @type {boolean} true | false
@@ -38,5 +38,5 @@ module.exports = {
    * The default is only used in the production env
    * If you want to also use it in dev, you can pass ['production', 'development']
    */
-  errorLog: 'production'
-}
+  errorLog: "production",
+};
