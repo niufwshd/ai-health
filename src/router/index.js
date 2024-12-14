@@ -149,6 +149,12 @@ export const asyncRoutes = [
         meta: { title: "动作定义", icon: "theme" },
       },
       {
+        path: "jump-rope",
+        component: () => import("@/views/pose/camera/jump-rope"),
+        name: "jump-rope",
+        meta: { title: "跳绳", icon: "theme" },
+      },
+      {
         path: "three",
         name: "three",
         meta: { title: "3D", icon: "theme" },
