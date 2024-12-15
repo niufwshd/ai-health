@@ -9,7 +9,7 @@
       loop
       muted
     >
-      <source src="sofa/video/jumprope.mp4" type="video/mp4" />
+      <source src="sofa/video/demo.mp4" type="video/mp4" />
       <p>This browser does not support the video element.</p>
     </video>
     <canvas
@@ -38,8 +38,8 @@ export default {
       canvasElement: "",
       stage: "DOWN",
       counter: 0,
-      boxHeight: 800,
-      boxWidth: 1000,
+      boxHeight: 400,
+      boxWidth: 240,
       direction: 0, // 仰卧起坐 0:躺下 1:为坐起
       timer: null,
       theta1: 0,
@@ -47,7 +47,7 @@ export default {
       shoulder_points: [],
       thresholds: {
         buffer_time: 50, // 缓冲区时间
-        dy_ratio: 0.001, // 移动幅度阈值
+        dy_ratio: 0.5, // 移动幅度阈值
         up_ratio: 0.55, // 上升阈值
         down_ratio: 0.35, // 下降阈值
         flag_low: 150, // 翻转标志低点
@@ -175,7 +175,7 @@ export default {
       //     this.timer = null;
       //   }
       //识别
-      this.findBehavior(results.poseLandmarks);
+      this.findBehavior(results);
       // } else {
       //   if (this.timer == null) {
       //     this.timer = setInterval(() => {
@@ -186,10 +186,11 @@ export default {
     },
 
     // 检测动作，获取次数
-    findBehavior(poseLandmarks) {
-      let arr = this.calculate_center_y(poseLandmarks);
+    findBehavior(result) {
+      let arr = this.calculate_center_y(result.poseLandmarks);
       let cy = arr[0];
       let cy_shoulder_hip = arr[1];
+      let cx = arr[2];
       this.buffers["center_y"].push(cy);
       this.cy_max = this.cy_max * 0.5 + 0.5 * _.max(this.buffers["center_y"]);
       this.buffers["center_y_up"].push(this.cy_max);
@@ -210,6 +211,13 @@ export default {
       canvasCtx.font = "26px Arial";
       canvasCtx.fillStyle = "red";
       canvasCtx.fillText("个数: " + this.counter.toString(), 20, 35);
+
+      canvasCtx.fillStyle = "yellow";
+      canvasCtx.beginPath();
+      canvasCtx.arc(cx, cy, 5, 0, 2 * Math.PI);
+      canvasCtx.stroke();
+      canvasCtx.fill();
+      canvasCtx.fillText("centroid", cx - 25, cy - 25);
       canvasCtx.restore();
 
       return this.counter;
@@ -245,7 +253,8 @@ export default {
       let cy_shoulder = parseInt(
         _.mean([this.shoulder_points[0].y, this.shoulder_points[1].y])
       );
-      return [cy_hip, cy_hip - cy_shoulder];
+      let cx = _.mean([this.hip_points[0].x, this.hip_points[1].x]);
+      return [cy_hip, cy_hip - cy_shoulder, cx];
     },
     update_counters(cy, cy_shoulder_hip) {
       let dy = this.cy_max - this.cy_min;
@@ -272,7 +281,7 @@ export default {
 </script>
 <style>
 .input_video {
-  width: 100%;
-  height: 800px;
+  width: 500px;
+  height: 400px;
 }
 </style>
