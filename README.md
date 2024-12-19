@@ -40,6 +40,7 @@ npm run build:prod
 
 ![跳绳视频计数](./public/rope.gif)
 ![虚拟动作人物制作](./public/virtual.gif)
-![动作定义] 根据瑜伽的标准动作计算角度，然后可以进行动作对比或者计数
+
+根据瑜伽的标准动作计算角度，然后可以进行动作对比或者计数
 ![简单](./public/simple.png)
 ![战士 1 式](./public/souldger.png)
