@@ -79,6 +79,7 @@ export default {
   beforeDestroy() {
     this.ctx = null;
     this.canvasElement = null;
+    this.timer = null;
   },
   methods: {
     init() {

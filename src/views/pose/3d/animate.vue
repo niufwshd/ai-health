@@ -188,7 +188,7 @@ export default {
     initModel() {
       let that = this;
       that.gltfLoader.load(
-        "http://localhost:82/sofa/jumping-jack.glb",
+        "http://localhost:8080/sofa/jumping-jack.glb",
         (gltf) => {
           console.log(gltf);
           gltf.scene.scale.set(1, 1, 1);

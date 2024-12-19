@@ -280,7 +280,7 @@ export default {
     // 模型加载
     initModel() {
       let that = this;
-      that.gltfLoader.load("http://localhost:82/sofa/sofa2.glb", (gltf) => {
+      that.gltfLoader.load("http://localhost:8080/sofa/sofa2.glb", (gltf) => {
         console.log(gltf);
         gltf.scene.traverse((mesh) => {
           if (mesh instanceof THREE.Mesh) {
