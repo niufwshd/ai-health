@@ -54,6 +54,7 @@ export default {
   beforeDestroy() {
     this.ctx = null;
     this.canvasElement = null;
+    clearInterval(this.timer);
     this.timer = null;
   },
   methods: {
